@@ -49,19 +49,19 @@
         }
     </style>
     <title>Steady Baking</title>
-    <asp:ContentPlaceHolder ID="head" runat="server" >
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="margin-top:60px;">
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
-    <header style="position: fixed; top: 0;">
-        <div style="display:flex; flex-direction:row; justify-content:space-between; width:100vw;">
+    <header>
+        <div style="display:flex; flex-direction:row; justify-content:space-between; width:100vw; position: fixed; top: 0; background-color:white;">
         <%-- Start Logo Image--%>
         <img class="logo" src="Assets/Logo.png" />
         <%-- End Logo Image--%>
@@ -86,13 +86,8 @@
          <%-- End of Header Right--%>
         </div>
     </header>
-
-
-
-    <div style="height:1000px">
-
+    <div style="height:100vh">
     </div>
-
 <!-- Footer -->
 <footer>
   <p style="font-family: 'times New Roman', Times, serif; text-align: center;">Copyright © Steady Bakery. All Rights Reserved</p>
