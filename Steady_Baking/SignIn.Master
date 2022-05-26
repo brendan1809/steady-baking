@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SignIn.Master" AutoEventWireup="true" CodeBehind="SignInPage.aspx.cs" Inherits="Steady_Baking.SignInPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SignIn.Master.cs" Inherits="Steady_Baking.SignIn" %>
 
 <!DOCTYPE html>
 <html>
@@ -100,7 +100,7 @@
      </div>
 <!-- Footer -->
 <footer>
-  <p style="font-family: 'times New Roman', Times, serif; text-align: center;">Copyright © Steady Bakery. All Rights Reserved</p>
+  <p style="font-family: 'times New Roman', Times, serif; text-align: center;">Copyright © Steady Bakery. All Rights Reserved.</p>
 </footer>
 
 </body>

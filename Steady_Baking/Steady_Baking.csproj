@@ -67,20 +67,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminUserManagement.aspx" />
-    <Content Include="AdminUserManagement.css" />
     <Content Include="Assets\Logo.png" />
     <Content Include="SignInPage.aspx" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminUserManagement.aspx.cs">
-      <DependentUpon>AdminUserManagement.aspx</DependentUpon>
+    <Compile Include="Content.Master.cs">
+      <DependentUpon>Content.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminUserManagement.aspx.designer.cs">
-      <DependentUpon>AdminUserManagement.aspx</DependentUpon>
+    <Compile Include="Content.Master.designer.cs">
+      <DependentUpon>Content.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.Master.cs">
+      <DependentUpon>SignIn.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn.Master.designer.cs">
+      <DependentUpon>SignIn.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignInPage.aspx.cs">
@@ -90,12 +95,12 @@
     <Compile Include="SignInPage.aspx.designer.cs">
       <DependentUpon>SignInPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
+    <Compile Include="CMS.Master.cs">
+      <DependentUpon>CMS.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
+    <Compile Include="CMS.Master.designer.cs">
+      <DependentUpon>CMS.Master</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -106,8 +111,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SignIn.Master" />
+    <Content Include="Content.Master" />
     <None Include="packages.config" />
-    <Content Include="Site1.Master" />
+    <Content Include="CMS.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

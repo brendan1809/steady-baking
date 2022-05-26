@@ -11,7 +11,7 @@ namespace Steady_Baking
 {
 
 
-    public partial class SignInPage
+    public partial class CMS
     {
 
         /// <summary>
