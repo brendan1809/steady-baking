@@ -56,7 +56,6 @@
 <body>
     <form id="form1" runat="server">
         <div style="margin-top:100px; flex-direction:row; display:flex;">
-
                 <div style="width:150px; background-color:lightgrey; border-radius:10px; margin-right:15px;">
                     <p>Dashboard</p>
                     <p>User</p>
@@ -64,11 +63,9 @@
                     <p>Misc</p>
                     <p>FAQ</p>
                     <p>Feedback</p>
-                </div>
-            <div style=" background-color:lightgray;">
+                </div>         
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
-            </div>
         </div>
     </form>
     <header>
