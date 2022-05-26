@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminDashboard.aspx" />
     <Content Include="AdminUser.aspx" />
     <Content Include="Assets\Logo.png" />
     <Content Include="SignInPage.aspx" />
@@ -74,6 +75,13 @@
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminUser.aspx.cs">
       <DependentUpon>AdminUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
