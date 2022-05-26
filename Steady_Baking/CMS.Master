@@ -47,17 +47,16 @@
         p{
             margin:0;
         }
+
     </style>
     <title>Steady Baking</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
         <div style="margin-top:100px; flex-direction:row; display:flex;">
-
-                <div style="width:150px; background-color:lightgrey; border-radius:10px; margin-right:15px;">
+                <div style="width:160px; line-height: 40px; background-color: #F5F6F2; border-radius:10px; margin-right:15px; text-align:center; color: #B2BBBE;">
                     <p>Dashboard</p>
                     <p>User</p>
                     <p>Recipes</p>
