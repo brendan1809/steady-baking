@@ -55,11 +55,6 @@
             overflow: hidden;
             background-color: #F5F6F2;
         }
-
-        li {
-            float: left;
-        }
-
         li a {
             text-decoration: none;
             display: block;
@@ -81,7 +76,6 @@
 <body>
     <form id="form1" runat="server">
         <div style="margin-top:100px; flex-direction:row; display:flex;">
-            <div>
                 <ul>
                     <li><a href="x.aspx">Dashboard</a></li>
                     <li><a href="AdminUser.aspx">User</a></li>
@@ -90,7 +84,6 @@
                     <li><a href="x.aspx">FAQ</a></li>
                     <li><a href="x.aspx">Feedback</a></li>
                </ul>
-            </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
