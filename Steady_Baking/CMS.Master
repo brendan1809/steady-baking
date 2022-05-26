@@ -47,6 +47,31 @@
         p{
             margin:0;
         }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #F5F6F2;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            color: #85837B;
+        }
+
+        li a:hover {
+            color:#FFB905;
+            background-color: #FFF1CF;
+        }
     </style>
     <title>Steady Baking</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -56,16 +81,18 @@
 <body>
     <form id="form1" runat="server">
         <div style="margin-top:100px; flex-direction:row; display:flex;">
-                <div style="width:160px; line-height: 30px; background-color:#F5F6F2; border-radius:10px; margin-right:15px; color:#85837B; text-align: center;">
-                    <p>Dashboard</p>
-                    <p>User</p>
-                    <p>Recipes</p>
-                    <p>Misc</p>
-                    <p>FAQ</p>
-                    <p>Feedback</p>
-                </div>         
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
+            <div>
+                <ul>
+                    <li><a href="x.aspx">Dashboard</a></li>
+                    <li><a href="AdminUser.aspx">User</a></li>
+                    <li><a href="x.aspx">Recipes</a></li>
+                    <li><a href="x.aspx">Misc</a></li>
+                    <li><a href="x.aspx">FAQ</a></li>
+                    <li><a href="x.aspx">Feedback</a></li>
+               </ul>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
         </div>
     </form>
     <header>
