@@ -77,8 +77,11 @@
     <Content Include="App_Data\Database2_log.ldf">
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
+    <Content Include="Assets\Facebook logo.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="registrationPage.aspx" />
     <Content Include="SignIn.aspx" />
+    <Content Include="SocialMediaButton.css" />
     <Content Include="Web.config" />
     <Content Include="index.aspx" />
   </ItemGroup>
@@ -103,6 +106,13 @@
     </Compile>
     <Compile Include="Content.Master.designer.cs">
       <DependentUpon>Content.Master</DependentUpon>
+    </Compile>
+    <Compile Include="registrationPage.aspx.cs">
+      <DependentUpon>registrationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrationPage.aspx.designer.cs">
+      <DependentUpon>registrationPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
