@@ -46,8 +46,6 @@
         </div>      
     </div>
 
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [data_created] FROM [User]"></asp:SqlDataSource>
-
 </asp:Content>
 
 
