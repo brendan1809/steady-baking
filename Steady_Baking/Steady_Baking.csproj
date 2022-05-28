@@ -81,6 +81,7 @@
     </Content>
     <Content Include="Assets\Facebook logo.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="ProfilePage.aspx" />
     <Content Include="registrationPage.aspx" />
     <Content Include="SignIn.aspx" />
     <Content Include="SocialMediaButton.css" />
@@ -115,6 +116,13 @@
     </Compile>
     <Compile Include="Content.Master.designer.cs">
       <DependentUpon>Content.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilePage.aspx.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfilePage.aspx.designer.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="registrationPage.aspx.cs">
       <DependentUpon>registrationPage.aspx</DependentUpon>
