@@ -20,30 +20,34 @@
           justify-content:space-between;
           flex-direction:column;
       }
+      .text-label{
+            display: block;
+            font-size: 2em;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
+      }
+      
     </style>
     <div style="margin-left:60px; width:100%">
           <h5>Dashboard</h5>
           <h3><u>Dashboard</u></h3>
         <div style="display:flex; flex-direction:row">
             <div class="content-box">
-                <h1>Total Today Visitor (Daily)</h1>
-                <h1>129,000</h1>
+                <h1>Total New User (Daily)</h1>
+                 <asp:Label ID="DailyUser" runat="server" CssClass="text-label" Text="user"></asp:Label>
             </div>
              <div class="content-box">
-                <h1>Total New User (Daily)</h1>
-                <h1>129</h1>
+                <h1>Total New User (Weekly)</h1>
+                <asp:Label ID="WeeklyUser" runat="server" CssClass="text-label" Text="user"></asp:Label>
             </div>
-        </div>
-         <div style="display:flex; flex-direction:row; margin-top:40px;">
-            <div class="content-box">
-                <h1>Total Today Visitor (Daily)</h1>
-                <h1>129,000</h1>
-            </div>
-             <div class="content-box">
-                <h1>Total New User (Daily)</h1>
-                <h1>129</h1>
-            </div>
-        </div>
+        </div>      
     </div>
 
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [data_created] FROM [User]"></asp:SqlDataSource>
+
 </asp:Content>
+
+
