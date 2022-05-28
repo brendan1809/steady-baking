@@ -19,8 +19,8 @@ namespace Steady_Baking
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
-            SqlCommand daily = new SqlCommand("SELECT COUNT (*) FROM UserInfo WHERE CONVERT (DATE, createdAt) = CONVERT (DATE, GETDATE())");
-            SqlCommand weekly = new SqlCommand("SELECT COUNT (*) FROM UserInfo WHERE CONVERT (DATE, createdAt) >= DATEADD(DAY, -7, GETDATE())");
+            SqlCommand daily = new SqlCommand("SELECT COUNT (*) FROM UserInfo WHERE CONVERT (DATE, created_at) = CONVERT (DATE, GETDATE())");
+            SqlCommand weekly = new SqlCommand("SELECT COUNT (*) FROM UserInfo WHERE CONVERT (DATE, created_at) >= DATEADD(DAY, -7, GETDATE())");
 
             daily.Connection = con;
             weekly.Connection = con;
@@ -30,6 +30,11 @@ namespace Steady_Baking
 
             DailyUser.Text = Convert.ToString(dailyUser);
             WeeklyUser.Text = Convert.ToString(weeklyUser);
+        }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
