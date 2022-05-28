@@ -11,7 +11,7 @@ namespace Steady_Baking
 {
 
 
-    public partial class AdminAddUser
+    public partial class AdminAddUser1
     {
 
         /// <summary>

@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="AdminAddUser.aspx.cs" Inherits="Steady_Baking.AdminAddUser" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CMS.Master" AutoEventWireup="true" CodeBehind="AdminAddUser.aspx.cs" Inherits="Steady_Baking.AdminAddUser1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <style type="text/css">
-        
         h5{
             margin:0;
             color:#FFB905;
@@ -32,97 +31,94 @@
             top:610px;
         }
     </style>
-    
-    <body>
-        <div style="margin-left:60px; width:100%">
-            <h5><span style ="color:#BDB6AA">User Management/  </span>Add New User</h5>
-            <h3>Add New User</h3>
-            <div style="display:flex; flex-direction:row"></div>
-            <div class="content-box">
-                <table class="auto-style1">
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label1" runat="server" Text="Name" ForeColor="#6E7376"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="Name" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Name" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <br>
-                            <asp:Label ID="Label2" runat="server" Text="Phone Number" ForeColor="#6E7376"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="PhoneNumber" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PhoneNumber" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <br>
-                            <asp:Label ID="Label3" runat="server" Text="Email" ForeColor="#6E7376"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="Email" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" EnableClientScript="False" ErrorMessage="Please enter a valid email." ForeColor="#D93F31" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Email" EnableClientScript="False" ErrorMessage="This Field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <br>
-                            <asp:Label ID="Label4" runat="server" Text="Role" ForeColor="#6E7376"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:DropDownList ID="DropDownList1" runat="server" Height="20px" Width="100px">
-                                <asp:ListItem>Users</asp:ListItem>
-                                <asp:ListItem>Admin</asp:ListItem>
-                                <asp:ListItem>Professional</asp:ListItem>
-                            </asp:DropDownList>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <br>
-                            <asp:Label ID="Label5" runat="server" Text="Password" ForeColor="#6E7376"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="Password" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <br>
-                            <asp:Label ID="Label6" runat="server" Text="Confirm Password" ForeColor="#6E7376"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="ConfirmPassword" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
-                            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="ConfirmPassword" ControlToValidate="Password" EnableClientScript="False" ErrorMessage="Password entered don't match." ForeColor="#D93F31"></asp:CompareValidator>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <br><br>
-                            <btn><asp:Button ID="AddUser" runat="server" BorderStyle="None" ForeColor="White" Text="Add User" BackColor="#FFB905" BorderColor="White" Height="25px" Width="80px" /></btn>
-                        </td>
-                    </tr>
-                </table>
-                </div>
+    <div style="margin-left:60px; width:100%">
+        <h5><span style ="color:#BDB6AA">User Management/  </span>Add New User</h5>
+        <h3>Add New User</h3>
+        <div style="display:flex; flex-direction:row"></div>
+        <div class="content-box">
+            <table class="auto-style1">
+                <tr>
+                    <td>
+                        <asp:Label ID="Label1" runat="server" Text="Name" ForeColor="#6E7376"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="Name" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Name" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <asp:Label ID="Label2" runat="server" Text="Phone Number" ForeColor="#6E7376"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="PhoneNumber" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PhoneNumber" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <asp:Label ID="Label3" runat="server" Text="Email" ForeColor="#6E7376"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="Email" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Email" EnableClientScript="False" ErrorMessage="Please enter a valid email." ForeColor="#D93F31" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Email" EnableClientScript="False" ErrorMessage="This Field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <asp:Label ID="Label4" runat="server" Text="Role" ForeColor="#6E7376"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:DropDownList ID="DropDownList1" runat="server" Height="20px" Width="100px">
+                            <asp:ListItem>Users</asp:ListItem>
+                            <asp:ListItem>Admin</asp:ListItem>
+                            <asp:ListItem>Professional</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <asp:Label ID="Label5" runat="server" Text="Password" ForeColor="#6E7376"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="Password" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <asp:Label ID="Label6" runat="server" Text="Confirm Password" ForeColor="#6E7376"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="ConfirmPassword" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="ConfirmPassword" ControlToValidate="Password" EnableClientScript="False" ErrorMessage="Password entered don't match." ForeColor="#D93F31"></asp:CompareValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br><br>
+                        <btn><asp:Button ID="AddUser" runat="server" BorderStyle="None" ForeColor="White" Text="Add User" BackColor="#FFB905" BorderColor="White" Height="25px" Width="80px" /></btn>
+                    </td>
+                </tr>
+            </table>
             </div>
-            <div style="display:flex; flex-direction:row; margin-top:40px;"></div>
-    </body>
+        </div>
+    <div style="display:flex; flex-direction:row; margin-top:40px;"></div>
 </asp:Content>
