@@ -29,12 +29,12 @@
             <table class="auto-style1">
                 <tr>
                     <td>
-                        <center><asp:Label ID="Label1" runat="server" Text="Email"></asp:Label></center>
+                        <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <center><asp:TextBox ID="TextBox1" runat="server" Width="166px"></asp:TextBox></center>
+                        <asp:TextBox ID="TextBox1" runat="server" Width="382px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
