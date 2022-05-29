@@ -81,8 +81,10 @@
     </Content>
     <Content Include="Assets\Facebook logo.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="ProfilePage.aspx" />
     <Content Include="registrationPage.aspx" />
+    <Content Include="ResetPassword.aspx" />
     <Content Include="SignIn.aspx" />
     <Content Include="SocialMediaButton.css" />
     <Content Include="Web.config" />
@@ -117,6 +119,13 @@
     <Compile Include="Content.Master.designer.cs">
       <DependentUpon>Content.Master</DependentUpon>
     </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProfilePage.aspx.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,6 +139,13 @@
     </Compile>
     <Compile Include="registrationPage.aspx.designer.cs">
       <DependentUpon>registrationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="SignIn.aspx.cs">
       <DependentUpon>SignIn.aspx</DependentUpon>
