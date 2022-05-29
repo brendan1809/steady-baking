@@ -13,5 +13,10 @@ namespace Steady_Baking
         {
 
         }
+
+        protected void AddUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminAddUser.aspx");
+        }
     }
 }
