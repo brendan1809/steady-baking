@@ -71,6 +71,9 @@
     <Content Include="AdminAddUser.aspx" />
     <Content Include="AdminDashboard.aspx" />
     <Content Include="AdminAddFAQ.aspx" />
+    <Content Include="AdminEditMisc.aspx" />
+    <Content Include="AdminMisc.aspx" />
+    <Content Include="AdminRecipe.aspx" />
     <Content Include="AdminUser.aspx" />
     <Content Include="AdminUser.css" />
     <Content Include="App_Data\Database1.mdf" />
@@ -121,6 +124,27 @@
     </Compile>
     <Compile Include="AdminAddFAQ.aspx.designer.cs">
       <DependentUpon>AdminAddFAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEditMisc.aspx.cs">
+      <DependentUpon>AdminEditMisc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEditMisc.aspx.designer.cs">
+      <DependentUpon>AdminEditMisc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMisc.aspx.cs">
+      <DependentUpon>AdminMisc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMisc.aspx.designer.cs">
+      <DependentUpon>AdminMisc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRecipe.aspx.cs">
+      <DependentUpon>AdminRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRecipe.aspx.designer.cs">
+      <DependentUpon>AdminRecipe.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminUser.aspx.cs">
       <DependentUpon>AdminUser.aspx</DependentUpon>

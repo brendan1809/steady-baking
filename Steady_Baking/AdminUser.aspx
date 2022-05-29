@@ -22,7 +22,7 @@
           <h5>User Management</h5>
            <div style="flex-direction:row; display:flex; justify-content:space-between; align-items:center;">
           <h3><u>User Management</u></h3>    
-               <asp:Button CssClass="AddButton" ID="AddUser" runat="server" Text="Add New Customer" onClick="AddUser_Click"/>
+               <asp:Button CssClass="AddButton" ID="AddUser" runat="server" Text="Add New Customer" onClick="AddUser_Click" Height="40px" Width="150px"/>
 
            </div>
     </div>
