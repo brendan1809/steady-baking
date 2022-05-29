@@ -24,9 +24,9 @@
         }
     </style>
     <div style="margin-left:60px; width:100%">
-        <h3>Account</h3>
         <div style="display:flex; flex-direction:row"></div>
         <div class="content-box">
+            <h3>Account</h3>
             <table class="auto-style1">
             <tr>
                 <td class="auto-style2">
