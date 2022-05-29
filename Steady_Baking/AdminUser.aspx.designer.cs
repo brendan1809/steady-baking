@@ -13,23 +13,5 @@ namespace Steady_Baking
 
     public partial class AdminUser
     {
-
-        /// <summary>
-        /// DailyUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DailyUser;
-
-        /// <summary>
-        /// WeeklyUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label WeeklyUser;
     }
 }
