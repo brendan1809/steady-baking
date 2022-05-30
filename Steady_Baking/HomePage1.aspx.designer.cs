@@ -11,7 +11,7 @@ namespace Steady_Baking
 {
 
 
-    public partial class HomePage
+    public partial class HomePage1
     {
 
         /// <summary>
