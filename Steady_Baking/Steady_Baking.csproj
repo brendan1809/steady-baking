@@ -92,6 +92,8 @@
     <Content Include="Assets\RecipeDetailsPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
     <Content Include="ForgotPassword.aspx" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="HomePage.css" />
     <Content Include="ProfilePage.aspx" />
     <Content Include="RecipePage.aspx" />
     <Content Include="registrationPage.aspx" />
@@ -206,6 +208,13 @@
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProfilePage.aspx.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>

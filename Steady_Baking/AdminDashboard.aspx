@@ -41,7 +41,7 @@
             </div>
              <div class="content-box">
                 <h1>Total New User (Weekly)</h1>
-                <asp:Label ID="WeeklyUser" runat="server" CssClass="text-label" Text="user"></asp:Label>
+                <asp:Label ID="WeeklyUser" runat="server" CssClass="text-label" Text="<b>user"></asp:Label>
             </div>
         </div>      
     </div>

@@ -78,7 +78,7 @@
     <form id="form1" runat="server">
         <div style="margin-top:100px; flex-direction:row; display:flex; height:100vh"">
                 <ul>
-                    <li><a href="AdminDashboard.aspx">Home</a></li>
+                    <li><a href="HomePage.aspx">Home</a></li>
                     <li><a href="AdminUser.aspx">About</a></li>
                     <li><a href="ProfilePage.aspx">Profile</a></li>
                     <li><a href="AdminMisc.aspx">Recipe</a></li>

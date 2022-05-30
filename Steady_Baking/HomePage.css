@@ -1,0 +1,73 @@
+﻿
+h5 {
+    margin: 0;
+    color: #FFB905;
+}
+
+h3 {
+    color: #FFB905;
+}
+
+.content-box {
+    margin-right: 40px;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px 20px;
+    height: 250px;
+    width: 800px;
+    justify-content: space-between;
+    flex-direction:column;
+}
+
+.fixedcontent-box {
+    background-color: white;
+    width: 800px;
+    height: 200px;
+    border-radius: 20px 20px;
+    padding: 50px;
+    margin-right: 40px;
+}
+
+
+.small-content-box {
+    margin-right: 40px;
+    background-color: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px 20px;
+    height: 200px;
+    width: 254px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.text-label {
+    display: block;
+    font-size: 2em;
+    margin-top: -4em;
+    margin-bottom: 2em;
+    margin-left: 9em;
+    margin-right: 4;
+    font-weight: bold;
+}
+
+.img-cakeheader {
+    height: 200px;
+    background-image: url(img/CakeHeader.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    position:relative;
+    left:30px; 
+    top:0px;
+}
+
+.welcomeheader {
+    color: #FFB905;
+    display: block;
+    position: relative;
+    left: 100px;
+    top: -200px;
+    font-size: 5em;
+    text-align-last: center;
+}
+
