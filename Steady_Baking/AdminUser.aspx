@@ -73,7 +73,7 @@
         <div style="background:white; margin-top:20px; padding:30px">
             <asp:Label ID="TotalUser" runat="server" Text="Label"></asp:Label>
             <div style="display:flex; align-items:center">
-                <asp:GridView ID="GridView1" runat="server" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand">
+                <asp:GridView ID="GridView1" runat="server" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                    
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" SortExpression="Id" ItemStyle-Width="200px">

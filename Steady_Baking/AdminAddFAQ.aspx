@@ -58,7 +58,7 @@
                     <tr>
                         <td>
                             <div style="position:relative; left:90px; top:40px;">
-                            <asp:Button ID="AddFAQ" runat="server" BackColor="#FFB905" BorderStyle="None" ForeColor="White" Height="25px" Text="Add New FAQ" Width="120px" />
+                            <asp:Button ID="AddFAQ" runat="server" BackColor="#FFB905" BorderStyle="None" ForeColor="White" Height="25px" Text="Add New FAQ" Width="120px" OnClick="AddFAQ_Click" />
                             </div>
                         </td>
                     </tr>
