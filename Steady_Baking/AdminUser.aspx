@@ -111,16 +111,16 @@
                         </asp:BoundField>
                           <asp:TemplateField HeaderText="Action" ItemStyle-Width="200px" ItemStyle-HorizontalAlign="Center">
                             <ItemTemplate>
-                                <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="EditUser" ID="EditButton" runat="server" Text="Edit" OnClick="EditButton_Click"/>
-                                <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="Del" ID="DeleteButton" runat="server" Text="Delete" OnClick="DeleteButton_Click"/>
+                                <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="EditUser" ID="EditButton" runat="server" Text="Edit" />
+                                <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="Del" ID="DeleteButton" runat="server" Text="Delete" />
                             </ItemTemplate>                
                            </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="UserInfoDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [UserInfo] WHERE Id = @Id" SelectCommand="SELECT * FROM [UserInfo]" >
-                     <DeleteParameters>
-                 <asp:ControlParameter Name="MUSTERI" ControlId="DropDownListID" PropertyName="SelectedValue" />
-   </DeleteParameters>
+                <asp:SqlDataSource ID="UserInfoDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [UserInfo]" DeleteCommand="DELETE FROM [UserInfo] WHERE [Id] = @Id">
+                    <DeleteParameters>
+                        <asp:Parameter Name="Id" Type="Int32"/>
+                    </DeleteParameters>
                 </asp:SqlDataSource>
             </div>
         </div>
