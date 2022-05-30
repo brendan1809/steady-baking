@@ -18,7 +18,7 @@
             background-color:white;
             padding:10px 10px 10px 10px;
             border-radius:20px 20px;
-            height:900px;
+            height:1200px;
             width:900px;
         }
         .auto-style1 {
@@ -41,12 +41,31 @@
         .auto-style4 {
             height: 42px;
         }
+        .TitleStyle {
+             display: block;
+             font-size: .83em;
+             margin:0;
+             font-weight: bold;
+             color:#FFB905;
+        }
+        .DescriptionStyle{
+              display: block;
+              font-size: 1.17em;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              margin-left: 0;
+              margin-right: 0;
+              font-weight: bold;
+              color:#FFB905;
+        }
         
     </style>
 
-    <div style="margin-left:60px; width:100%">
-        <h5><span style ="color:#BDB6AA">Recipes Management/  </span>Add New Recipes</h5>
-        <h3>Add New Recipes</h3>
+    <div style="margin-left:60px; width:100%; height:100%">
+        <div style="flex-direction:row; display:flex; align-items:center;">
+        <h5><span style ="color:#BDB6AA">Recipe Management/  </span></h5>  <asp:Label ID="TitleText" runat="server" Text="Label" CssClass="TitleStyle"/>
+        </div>
+        <asp:Label ID="DesciptionText" runat="server" Text="Label" CssClass="DescriptionStyle"/>
         <div style="display:flex; flex-direction:row"></div>
         <div class="content-box">
             <table class="auto-style1">
@@ -77,13 +96,12 @@
                     <td>
                         <br>
                         <asp:Label ID="Label2" runat="server" ForeColor="#6E7376" Text="Image"></asp:Label>
+                            <asp:FileUpload ID="FileUpload1" runat="server" /><br/>
+                            <asp:Button ID="Button1" runat="server" Text="Upload File" OnClick="UploadFile" /><br/>
+                            <asp:Image ID="Image1" runat="server"  />
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <asp:Image ID="Image1" runat="server" />
-                    </td>
-                </tr>
+
                 <tr>
                     <td>
                         <asp:Label ID="Label6" runat="server" ForeColor="#6E7376" Text="Ingredients &amp; Tools"></asp:Label>
@@ -141,7 +159,6 @@
             </table>
         </div>
     </div>
-    <div style="display:flex; flex-direction:row; margin-top:40px;"></div>
 
 
 

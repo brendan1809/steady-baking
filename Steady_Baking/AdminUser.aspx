@@ -16,7 +16,6 @@
         .GridViewStyle{
           margin-top:30px;
           width:100%
-
         } 
         
         .SearchBoxStyle{
