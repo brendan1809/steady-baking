@@ -2,16 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <style type="text/css">
-        h5{
-            margin:0;
-            color:#FFB905;
-        }
-
-        h3{
-            color:#FFB905;
-        }
-        
+    <style type="text/css">        
         .content-box{
             margin-right:40px;
             background-color:white;
@@ -31,10 +22,30 @@
         .auto-style3 {
             height: 32px;
         }
+        .TitleStyle {
+             display: block;
+             font-size: .83em;
+             margin:0;
+             font-weight: bold;
+             color:#FFB905;
+        }
+        .DescriptionStyle{
+              display: block;
+              font-size: 1.17em;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              margin-left: 0;
+              margin-right: 0;
+              font-weight: bold;
+              color:#FFB905;
+        }
     </style>
     <div style="margin-left:60px; width:100%">
-        <h5><span style ="color:#BDB6AA">User Management/  </span>Add New User</h5>
-        <h3>Add New User</h3>
+       
+        <div style="flex-direction:row; display:flex; align-items:center;">
+        <h5><span style ="color:#BDB6AA">User Management/  </span></h5>  <asp:Label ID="TitleText" runat="server" Text="Label" CssClass="TitleStyle"/>
+        </div>
+        <asp:Label ID="DesciptionText" runat="server" Text="Label" CssClass="DescriptionStyle"/>
         <div style="display:flex; flex-direction:row"></div>
         <div class="content-box">
             <table class="auto-style1">
@@ -115,7 +126,7 @@
                     <td>
                         <br><br>
                         <div style="position:relative; left:80px; top:2px;">
-                            <asp:Button ID="AddUser" runat="server" BorderStyle="None" ForeColor="White" Text="Add User" BackColor="#FFB905" BorderColor="White" Height="25px" Width="80px" OnClick="AddUser_Click" />
+                            <asp:Button ID="Submit" runat="server" BorderStyle="None" ForeColor="White" Text="Submit" BackColor="#FFB905" BorderColor="White" Height="25px" Width="80px" OnClick="Submit_Click" />
                         </div>
                     </td>
                 </tr>

@@ -65,15 +65,9 @@
             <div style="flex-direction:row; display:flex; align-items:center">
                 <p>Search By :</p>
                 <asp:TextBox CssClass="SearchBoxStyle" ID="TextBox1" runat="server" placeholder="Quick Search"></asp:TextBox>
-
-                <p>Role </p>
-                <asp:DropDownList CssClass="RoleDropdownStyle" ID="DropDownList1" runat="server" Height="20px" Width="100px" placeholder="Select Role">
-                            <asp:ListItem>Users</asp:ListItem>
-                            <asp:ListItem>Admin</asp:ListItem>
-                 </asp:DropDownList>
             </div>
             <div style="flex-direction:row; display:flex; align-items:center; justify-content:flex-end">
-                <asp:Button ID="SearchButton" runat="server" Text="Search" CssClass="SearchButtonStyle" />
+                <asp:Button ID="SearchButton" runat="server" Text="Search" CssClass="SearchButtonStyle" OnClick="SearchButton_Click"/>
                 <asp:Button ID="ResetButton" runat="server" Text="Reset" CssClass="ResetButtonStyle"/>
             </div>
         </div>
@@ -82,8 +76,7 @@
         <div style="background:white; margin-top:20px; padding:30px">
             <asp:Label ID="TotalUser" runat="server" Text="Label"></asp:Label>
             <div style="display:flex; align-items:center">
-                <asp:GridView ID="GridView1" runat="server" CssClass="auto-style1" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="UserInfoDataSource" OnRowCommand="GridView1_RowCommand" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
-                   
+                <asp:GridView ID="UserGridView" runat="server" CssClass="auto-style1" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="UserInfoDataSource" OnRowCommand="UserGridView_RowCommand" >
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" SortExpression="Id" ItemStyle-Width="200px">
 <ItemStyle Width="200px"></ItemStyle>

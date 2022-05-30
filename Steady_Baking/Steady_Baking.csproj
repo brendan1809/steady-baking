@@ -87,9 +87,9 @@
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\Facebook logo.png" />
-    <Content Include="Assets\FAQPage.aspx" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\RecipeDetailsPage.aspx" />
+    <Content Include="FAQPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="ProfilePage.aspx" />
@@ -172,13 +172,6 @@
     <Compile Include="AdminUser.aspx.designer.cs">
       <DependentUpon>AdminUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Assets\FAQPage.aspx.cs">
-      <DependentUpon>FAQPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Assets\FAQPage.aspx.designer.cs">
-      <DependentUpon>FAQPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Assets\RecipeDetailsPage.aspx.cs">
       <DependentUpon>RecipeDetailsPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -192,6 +185,13 @@
     </Compile>
     <Compile Include="Content.Master.designer.cs">
       <DependentUpon>Content.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FAQPage.aspx.cs">
+      <DependentUpon>FAQPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQPage.aspx.designer.cs">
+      <DependentUpon>FAQPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="FeedbackPage.aspx.cs">
       <DependentUpon>FeedbackPage.aspx</DependentUpon>
