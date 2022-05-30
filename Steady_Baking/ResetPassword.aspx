@@ -37,7 +37,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server" Width="385px" CssClass="auto-style2"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Width="196px" CssClass="auto-style2"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +47,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="TextBox2" runat="server" Width="385px"></asp:TextBox>
+                        <asp:TextBox ID="TextBox2" runat="server" Width="196px"></asp:TextBox>
+                    &nbsp;&nbsp;
+                        <asp:Label ID="Label3" runat="server" Text="New password not matched" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>

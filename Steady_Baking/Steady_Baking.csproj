@@ -67,8 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminAddRecipe.aspx" />
     <Content Include="AdminAddUser.aspx" />
     <Content Include="AdminDashboard.aspx" />
+    <Content Include="AdminAddFAQ.aspx" />
+    <Content Include="AdminEditMisc.aspx" />
+    <Content Include="AdminMisc.aspx" />
+    <Content Include="AdminRecipe.aspx" />
     <Content Include="AdminUser.aspx" />
     <Content Include="AdminUser.css" />
     <Content Include="App_Data\Database1.mdf" />
@@ -92,6 +97,13 @@
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminAddRecipe.aspx.cs">
+      <DependentUpon>AdminAddRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddRecipe.aspx.designer.cs">
+      <DependentUpon>AdminAddRecipe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminAddUser.aspx.cs">
       <DependentUpon>AdminAddUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,6 +117,34 @@
     </Compile>
     <Compile Include="AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddFAQ.aspx.cs">
+      <DependentUpon>AdminAddFAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddFAQ.aspx.designer.cs">
+      <DependentUpon>AdminAddFAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEditMisc.aspx.cs">
+      <DependentUpon>AdminEditMisc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEditMisc.aspx.designer.cs">
+      <DependentUpon>AdminEditMisc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMisc.aspx.cs">
+      <DependentUpon>AdminMisc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMisc.aspx.designer.cs">
+      <DependentUpon>AdminMisc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRecipe.aspx.cs">
+      <DependentUpon>AdminRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRecipe.aspx.designer.cs">
+      <DependentUpon>AdminRecipe.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminUser.aspx.cs">
       <DependentUpon>AdminUser.aspx</DependentUpon>

@@ -25,11 +25,6 @@
             width: 100%;
         }
 
-        btn {
-            position:fixed;
-            left:220px;
-            top:610px;
-        }
         .auto-style2 {
             height: 42px;
         }
@@ -117,7 +112,9 @@
                 <tr>
                     <td>
                         <br><br>
-                        <btn><asp:Button ID="AddUser" runat="server" BorderStyle="None" ForeColor="White" Text="Add User" BackColor="#FFB905" BorderColor="White" Height="25px" Width="80px" OnClick="AddUser_Click" /></btn>
+                        <div style="position:relative; left:80px; top:2px;">
+                            <asp:Button ID="AddUser" runat="server" BorderStyle="None" ForeColor="White" Text="Add User" BackColor="#FFB905" BorderColor="White" Height="25px" Width="80px" OnClick="AddUser_Click" />
+                        </div>
                     </td>
                 </tr>
             </table>
