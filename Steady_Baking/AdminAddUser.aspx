@@ -28,6 +28,9 @@
         .auto-style2 {
             height: 42px;
         }
+        .auto-style3 {
+            height: 32px;
+        }
     </style>
     <div style="margin-left:60px; width:100%">
         <h5><span style ="color:#BDB6AA">User Management/  </span>Add New User</h5>
@@ -53,7 +56,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="auto-style3">
                         <asp:TextBox ID="PhoneNumber" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="PhoneNumber" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                     </td>

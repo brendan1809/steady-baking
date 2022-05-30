@@ -5,7 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
-
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Steady_Baking
 {
@@ -20,7 +23,8 @@ namespace Steady_Baking
         {
 
         }
-
+        
+      
         protected void UploadFile(object sender, EventArgs e)
         {
 

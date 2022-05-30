@@ -39,6 +39,10 @@
             width: 100%;
         }
       
+        .auto-style3 {
+            height: 41px;
+        }
+      
     </style>
     <div style="margin-left:60px; width:100%">
         <h5><span style ="color:#BDB6AA">Miscellaneous /  </span>Miscellaneous Management</h5>
@@ -59,7 +63,8 @@
                     </tr>
                     <tr>
                         <td>
-                        <asp:TextBox ID="TotalTime" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="Email" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Email" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -70,7 +75,8 @@
                     </tr>
                     <tr>
                         <td>
-                        <asp:TextBox ID="TotalTime0" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="FbName" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="FbName" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -81,7 +87,8 @@
                     </tr>
                     <tr>
                         <td>
-                        <asp:TextBox ID="TotalTime1" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="FbURL" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="FbURL" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -91,8 +98,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                        <asp:TextBox ID="TotalTime2" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <td class="auto-style3">
+                        <asp:TextBox ID="InstaName" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="InstaName" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -103,7 +111,8 @@
                     </tr>
                     <tr>
                         <td>
-                        <asp:TextBox ID="TotalTime3" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="InstaURL" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="InstaURL" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -124,7 +133,9 @@
                      <tr>
                          <td>
                              <br>
-                             <asp:TextBox ID="TotalTime4" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="200px" Width="380px"></asp:TextBox>
+                             <asp:TextBox ID="AboutUs" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="200px" Width="380px"></asp:TextBox>
+                             <br />
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="AboutUs" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                          </td>
                      </tr>
                      <tr>
