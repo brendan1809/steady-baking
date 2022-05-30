@@ -85,7 +85,6 @@
                         <asp:DropDownList ID="DropDownList1" runat="server" Height="20px" Width="100px">
                             <asp:ListItem>Users</asp:ListItem>
                             <asp:ListItem>Admin</asp:ListItem>
-                            <asp:ListItem>Professional</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>
