@@ -36,7 +36,7 @@ namespace Steady_Baking
         {
             if (e.CommandName.ToString() == "EditUser")
             {
-                Response.Redirect("AdminAddUser.aspx" + "/Edit/id?=" + e.CommandArgument);
+                Response.Redirect("AdminAddUser.aspx" + "/edit/id?=" + e.CommandArgument);
             }
         }
 
