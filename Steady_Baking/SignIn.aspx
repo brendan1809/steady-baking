@@ -49,7 +49,7 @@
                     <td class="auto-style9">
                         <asp:TextBox ID="emailBox" runat="server" BorderColor="#FFB905" Width="186px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="Label8" runat="server" Text="This field is required" Visible="False"></asp:Label>
+                        <asp:Label ID="Label8" runat="server" Text="Email address not found" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>

@@ -79,7 +79,7 @@
                     <li><a href="AdminDashboard.aspx">Dashboard</a></li>
                     <li><a href="AdminUser.aspx">User</a></li>
                     <li><a href="AdminRecipe.aspx">Recipes</a></li>
-                    <li><a href="AdminMisc.aspx">Misc</a></li>
+                    <li><a href="AdminEditMisc.aspx">Misc</a></li>
                     <li><a href="AdminFAQ.aspx">FAQ</a></li>
                     <li><a href="AdminFeedback.aspx">Feedback</a></li>
                </ul>

@@ -74,7 +74,7 @@
 
     </asp:ContentPlaceHolder>
 </head>
-<body style="background-color:#F7F7F7;">
+<body style="background-color:#F7F7F7; display:flex;">
     <form id="form1" runat="server">
         <div style="margin-top:100px; flex-direction:row; display:flex; height:100vh"">
                 <ul>
@@ -85,7 +85,7 @@
                     <li><a href="AdminFAQ.aspx">Contact Us</a></li>
                     <li><a href="FeedbackPage.aspx">FAQ</a></li>
                 </ul>
-            <div style="display:flex; width:100%">
+            <div style="display:flex; width:100%; height:100%">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
             </div>
@@ -111,7 +111,7 @@
     </header>
 <!-- Footer -->
 <footer>
-  <p style="font-family: 'times New Roman', Times, serif; text-align: center;">Copyright © Steady Bakery. All Rights Reserved</p>
+  <p style="font-family: 'times New Roman', Times, serif; text-align: center; bottom:0; position: fixed; background-color:white">Copyright © Steady Bakery. All Rights Reserved</p>
 </footer>
 
 </body>

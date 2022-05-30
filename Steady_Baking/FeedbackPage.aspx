@@ -14,6 +14,9 @@
         .auto-style1 {
             width: 100%;
         }
+        .auto-style2 {
+            height: 30px;
+        }
     </style>
     <div style="margin-left:60px; width:100%">
         <div style="display:flex; flex-direction:row"></div>
@@ -39,10 +42,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="auto-style2">
                         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="Label5" runat="server" Text="Invalid email address"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Text="This field is required" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -54,6 +57,7 @@
                     <td>
                         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label7" runat="server" Text="This field is required" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -68,7 +72,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <center><asp:Button ID="Button1" runat="server" Text="Submit Feedback" Width="115px" /></center>
+                        <center><asp:Button ID="Button1" runat="server" Text="Submit Feedback" Width="115px" OnClick="Button1_Click" /></center>
                     </td>
                 </tr>
             </table>
