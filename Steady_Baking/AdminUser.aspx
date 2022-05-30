@@ -48,7 +48,7 @@
           <h5>User Management</h5>
            <div style="flex-direction:row; display:flex; justify-content:space-between; align-items:center;">
           <h3><u>User Management</u></h3>    
-               <asp:Button CssClass="AddButtonStyle" ID="AddUser" runat="server" Text="Add New Customer" onClick="AddUser_Click"/>
+               <asp:Button CssClass="AddButtonStyle" ID="AddUser" runat="server" Text="Add New User" onClick="AddUser_Click"/>
            </div>
 
      
@@ -113,8 +113,6 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [UserInfo]"></asp:SqlDataSource>
             </div>
         </div>
-        <asp:Label ID="Test1" runat="server" Text="Label"></asp:Label>
-        <asp:Label ID="Test2" runat="server" Text="Label"></asp:Label>
     </div>
 </asp:Content>
 

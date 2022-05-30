@@ -49,7 +49,6 @@ namespace Steady_Baking
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            Test2.Text = e.CommandName;
             if (e.CommandName.ToString() == "Del")
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
