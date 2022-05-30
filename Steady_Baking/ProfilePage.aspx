@@ -40,26 +40,10 @@
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:Label ID="Label2" runat="server" Text="Name:"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
                     <asp:Label ID="Label3" runat="server" Text="Email:"></asp:Label>
                 </td>
                 <td>
                     <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    <asp:Label ID="Label4" runat="server" Text="Password:"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -74,7 +58,7 @@
                 <td class="auto-style2">
                     &nbsp;</td>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="Edit Profile" />
+                    <asp:Button ID="Button1" runat="server" Text="Edit Profile" OnClick="Button1_Click" />
                 </td>
             </tr>
             </table>

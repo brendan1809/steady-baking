@@ -55,9 +55,9 @@
         </style>
     
     <div style="margin-left:60px; width:100%">
-        <h5>User Management</h5>
+        <h5>FAQ Management</h5>
         <div style="flex-direction:row; display:flex; justify-content:space-between; align-items:center;">
-            <h3><u>User Management</u></h3>
+            <h3><u>FAQ Management</u></h3>
             <asp:Button CssClass="AddButtonStyle" ID="AddFAQ" runat="server" Text="Add New FAQ" onClick="AddFAQ_Click"/>
         </div>
         <div style="background:white; margin-top:20px; padding:30px">
