@@ -64,10 +64,10 @@
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="RecipeDataSource"  OnRowCommand="GridView1_RowCommand1">
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" ItemStyle-Width="200px"/>
-                        <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" ItemStyle-Width="200px"/>
-                        <asp:BoundField DataField="author" HeaderText="author" SortExpression="author" ItemStyle-Width="200px"/>
-                        <asp:BoundField DataField="created_at" HeaderText="created_at" SortExpression="created_at" ItemStyle-Width="200px"/>
-                        <asp:BoundField DataField="updated_at" HeaderText="updated_at" SortExpression="updated_at" ItemStyle-Width="200px"/>
+                        <asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" ItemStyle-Width="200px"/>
+                        <asp:BoundField DataField="author" HeaderText="Author" SortExpression="author" ItemStyle-Width="200px"/>
+                        <asp:BoundField DataField="created_at" HeaderText="Created At" SortExpression="created_at" ItemStyle-Width="200px"/>
+                        <asp:BoundField DataField="updated_at" HeaderText="Updated At" SortExpression="updated_at" ItemStyle-Width="200px"/>
                          <asp:TemplateField HeaderText="Action" ItemStyle-Width="200px" ItemStyle-HorizontalAlign="Center">
                             <ItemTemplate>
                                 <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="EditRecipe" ID="EditButton" runat="server" Text="Edit" />
