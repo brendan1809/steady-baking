@@ -71,9 +71,9 @@
 
 
         <div style="background:white; margin-top:20px; padding:30px">
-            <p>Total User:</p>
+            <asp:Label ID="TotalUser" runat="server" Text="Label"></asp:Label>
             <div style="display:flex; align-items:center">
-                <asp:GridView ID="GridView1" runat="server" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True">
+                <asp:GridView ID="GridView1" runat="server" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand">
                    
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" SortExpression="Id" ItemStyle-Width="200px">
@@ -102,9 +102,9 @@
                         </asp:BoundField>
                           <asp:TemplateField HeaderText="Action" ItemStyle-Width="200px" ItemStyle-HorizontalAlign="Center">
                             <ItemTemplate>
-                                <asp:LinkButton ID="ViewButton" runat="server" Text="View" OnClick="ViewButton_Click"/>
-                                <asp:LinkButton ID="EditButton" runat="server" Text="Edit" OnClick="EditButton_Click"/>
-                                <asp:LinkButton ID="DeleteButton" runat="server" Text="Delete" OnClick="DeleteButton_Click"/>
+                                <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="View" ID="ViewButton" runat="server" Text="View" OnClick="ViewButton_Click"/>
+                                <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="EditUser" ID="EditButton" runat="server" Text="Edit" OnClick="EditButton_Click"/>
+                                <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="Del" ID="DeleteButton" runat="server" Text="Delete" OnClick="DeleteButton_Click"/>
                             </ItemTemplate>                
                            </asp:TemplateField>
                     </Columns>
@@ -113,7 +113,8 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [UserInfo]"></asp:SqlDataSource>
             </div>
         </div>
-        
+        <asp:Label ID="Test1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Test2" runat="server" Text="Label"></asp:Label>
     </div>
 </asp:Content>
 

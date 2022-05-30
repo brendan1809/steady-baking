@@ -15,17 +15,16 @@ namespace Steady_Baking
 {
     public partial class AdminUser : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            //  SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            //con.Open();
-            //SqlCommand user = new SqlCommand("SELECT * FROM UserInfo", con);
-            //SqlDataAdapter sda = new SqlDataAdapter(user);
-            //DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            con.Open();
+            SqlCommand total = new SqlCommand("SELECT COUNT (*) FROM UserInfo",con);
 
-            //sda.Fill(dt);
-            //GridView1.DataSource = dt;
-            //GridView1.DataBind();
+            object totalUser = total.ExecuteScalar();
+
+            TotalUser.Text = "Total User:" + Convert.ToString(totalUser);
         }
 
         protected void AddUser_Click(object sender, EventArgs e)
@@ -46,6 +45,22 @@ namespace Steady_Baking
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            Test2.Text = e.CommandName;
+            if (e.CommandName.ToString() == "Del")
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                con.Open();
+                SqlCommand cmd1 = new SqlCommand("DELETE FROM UserInfo WHERE Id =" + e.CommandArgument, con);
+                cmd1.ExecuteNonQuery();
+            }
+            else if (e.CommandName.ToString() == "EditUser")
+            {
+                Response.Redirect("AdminAddUser.aspx" + "/Edit/id?=" + e.CommandArgument);
+            }
         }
     }
 }

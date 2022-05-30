@@ -60,6 +60,15 @@ namespace Steady_Baking
         protected global::System.Web.UI.WebControls.Button ResetButton;
 
         /// <summary>
+        /// TotalUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TotalUser;
+
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -76,5 +85,23 @@ namespace Steady_Baking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+
+        /// <summary>
+        /// Test1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Test1;
+
+        /// <summary>
+        /// Test2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Test2;
     }
 }
