@@ -65,5 +65,10 @@ namespace Steady_Baking
                 Response.Redirect("AdminAddUser.aspx" + "/Edit/id?=" + e.CommandArgument);
             }
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
