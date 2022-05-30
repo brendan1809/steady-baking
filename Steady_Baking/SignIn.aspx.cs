@@ -30,11 +30,14 @@ namespace Steady_Baking
 
             if (count > 0)
             {
-                SqlCommand cmdType = new SqlCommand("select Usertype from UserInfo where Username = '" + emailBox.Text + "'", con);
+                SqlCommand cmdType = new SqlCommand("select user_type from UserInfo where email = '" + emailBox.Text + "'", con);
+                SqlCommand getId = new SqlCommand("select Id from UserInfo where email = '" + emailBox.Text + "'", con);
                 string type = cmdType.ExecuteScalar().ToString().Replace(" ", "");
+                string id = getId.ExecuteScalar().ToString().Replace(" ", "");
                 string email = emailBox.Text;
                 Session["user_type"] = type;
                 Session["email"] = email;
+                Session["Id"] = id;
                 if (type == "Admin")
                     Response.Redirect("AdminDashbard.aspx");
                 else if (type == "Users")
