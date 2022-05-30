@@ -2,46 +2,55 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <style>
-      h5{
+    <style>
+        
+        h5{
           margin:0;
           color:#FFB905;
-      }
-      h3{
-          color:#FFB905;
-      }
-      .AddButtonStyle{
+        }
+
+        h3{
+            color:#FFB905;
+        }
+        
+        .GridViewStyle{
+          margin-top:30px;
+          width:100%
+
+        } 
+        
+        .SearchBoxStyle{
+          margin-left:10px;
+          margin-right:10px;
+        }
+        
+        .RoleDropdownStyle{
+            margin-left:10px
+          }
+        
+        .AddButtonStyle{
           height: 43px;
           width:196px;
           border:0px;
           background-color:#FFB905;
           color:white;
-      }
-      .SearchBoxStyle{
-          margin-left:10px;
-          margin-right:10px;
-      }
-      .RoleDropdownStyle{
-          margin-left:10px
-      }
-      .SearchButtonStyle{
+        }
+        
+        .SearchButtonStyle{
           margin-right:10px;
           border:0px;
           background-color:#FFB905;
           color:white;
           height: 43px;
           width:79px;
-      }
-      .ResetButtonStyle{
+        }
+        
+        .ResetButtonStyle{
           border-color:lightgrey;
           background-color:white;
           height: 43px;
           width:79px;
-      }
-      .GridViewStyle{
-          margin-top:30px;
-          width:100%
-      } 
+        }
 
     </style>
     <div style="margin-left:60px; width:100%">
@@ -73,7 +82,7 @@
         <div style="background:white; margin-top:20px; padding:30px">
             <asp:Label ID="TotalUser" runat="server" Text="Label"></asp:Label>
             <div style="display:flex; align-items:center">
-                <asp:GridView ID="GridView1" runat="server" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="UserInfoDataSource" OnRowCommand="GridView1_RowCommand">
+                <asp:GridView ID="GridView1" runat="server" CssClass="auto-style1" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="UserInfoDataSource" OnRowCommand="GridView1_RowCommand" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
                    
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" SortExpression="Id" ItemStyle-Width="200px">

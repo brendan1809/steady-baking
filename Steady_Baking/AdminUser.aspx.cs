@@ -44,5 +44,10 @@ namespace Steady_Baking
         {
 
         }
+
+        protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

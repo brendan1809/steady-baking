@@ -25,7 +25,17 @@ namespace Steady_Baking
             Response.Redirect("AdminAddFAQ.aspx");
         }
 
-        protected void GridView2_RowCommand(object sender, EventArgs e)
+        protected void EditButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DeleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName.ToString() == "Del")
             {
