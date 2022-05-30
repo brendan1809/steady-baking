@@ -43,7 +43,7 @@ namespace Steady_Baking
             else
             {
                 this.Label8.Visible = true;
-                this.Label8.ForeColor = System.Drawing.Color.DarkGreen;
+                this.Label8.ForeColor = System.Drawing.Color.Red;
                 return;
             }
             con.Close();
