@@ -13,5 +13,10 @@ namespace Steady_Baking
         {
 
         }
+
+        protected void BulletedList1_Click(object sender, BulletedListEventArgs e)
+        {
+
+        }
     }
 }
