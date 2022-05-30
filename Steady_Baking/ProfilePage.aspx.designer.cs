@@ -33,13 +33,13 @@ namespace Steady_Baking
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// TextBox1 control.
+        /// usernameBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox usernameBox;
 
         /// <summary>
         /// Label3 control.
@@ -51,13 +51,13 @@ namespace Steady_Baking
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// TextBox3 control.
+        /// emailBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox emailBox;
 
         /// <summary>
         /// Label5 control.
@@ -69,13 +69,13 @@ namespace Steady_Baking
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// TextBox5 control.
+        /// phoneNoBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox phoneNoBox;
 
         /// <summary>
         /// Button1 control.

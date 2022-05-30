@@ -32,22 +32,16 @@ namespace Steady_Baking
             Response.Redirect("AdminAddUser.aspx");
         }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void UserGridView_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName.ToString() == "EditUser")
             {
-                Response.Redirect("AdminAddUser.aspx" + "/edit/id?=" + e.CommandArgument);
+                Response.Redirect("AdminAddUser.aspx?id=" + e.CommandArgument + "/edit" );
             }
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void SearchButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
-        {
-
         }
     }
 }

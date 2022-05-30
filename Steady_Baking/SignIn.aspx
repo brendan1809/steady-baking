@@ -32,11 +32,7 @@
             height: 22px;
             width: 777px;
         }
-        .auto-style17 {
-            width: 777px;
-            height: 34px;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="margin-left:60px; width:100%">
