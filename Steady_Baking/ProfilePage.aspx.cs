@@ -11,6 +11,11 @@ namespace Steady_Baking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label5.Text = Session["Id"].ToString();
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
 
         }
     }
