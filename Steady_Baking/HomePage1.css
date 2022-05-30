@@ -16,7 +16,7 @@ h3 {
     height: 250px;
     width: 800px;
     justify-content: space-between;
-    flex-direction:column;
+    flex-direction: column;
 }
 
 .fixedcontent-box {
@@ -56,9 +56,9 @@ h3 {
     background-size: 100%;
     background-repeat: no-repeat;
     border-radius: 8px;
-    position:relative;
-    left:30px; 
-    top:0px;
+    position: relative;
+    left: 30px;
+    top: 0px;
 }
 
 .welcomeheader {
@@ -70,4 +70,3 @@ h3 {
     font-size: 5em;
     text-align-last: center;
 }
-
