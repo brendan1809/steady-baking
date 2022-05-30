@@ -24,10 +24,6 @@
             height: 26px;
             width: 777px;
         }
-        .auto-style10 {
-            width: 35px;
-            height: 35px;
-        }
         .auto-style12 {
             width: 777px;
             height: 43px;
@@ -74,15 +70,6 @@
                     <td class="auto-style12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" BackColor="#FFB905" BorderStyle="Solid" ForeColor="White" OnClick="Button1_Click" Text="Sign in" Height="29px" Width="83px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                 </td>
-                </tr>
-                <tr>
-                    <td class="auto-style17">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-                        <font size="3">or sign in with other accounts?</font></td>
-                </tr>
-                <tr>
-                    <td class="auto-style17">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="Assets/Facebook%20logo.png" class="auto-style10" />
-                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style7"><font size="3">Don't have an account? </font><a href="registrationPage.aspx">Click here to sign up</a> </td>
