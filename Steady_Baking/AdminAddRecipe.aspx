@@ -38,6 +38,10 @@
             height: 28px;
         }
         
+        .auto-style4 {
+            height: 42px;
+        }
+        
     </style>
 
     <div style="margin-left:60px; width:100%">
@@ -56,6 +60,17 @@
                     <td>
                         <asp:TextBox ID="PageTitle" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="PageTitle" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                        </td>
+                </tr>
+                <tr>
+                    <td class="auto-style4">
+                        <br>
+                        <asp:Label ID="Label7" runat="server" Text="Author" ForeColor="#6E7376"></asp:Label>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="Author" runat="server"></asp:TextBox>
                         </td>
                 </tr>
                 <tr>
