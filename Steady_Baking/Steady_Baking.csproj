@@ -87,10 +87,13 @@
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\Facebook logo.png" />
+    <Content Include="Assets\FAQPage.aspx" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\RecipeDetailsPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="ProfilePage.aspx" />
+    <Content Include="RecipePage.aspx" />
     <Content Include="registrationPage.aspx" />
     <Content Include="ResetPassword.aspx" />
     <Content Include="SignIn.aspx" />
@@ -169,6 +172,20 @@
     <Compile Include="AdminUser.aspx.designer.cs">
       <DependentUpon>AdminUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Assets\FAQPage.aspx.cs">
+      <DependentUpon>FAQPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\FAQPage.aspx.designer.cs">
+      <DependentUpon>FAQPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\RecipeDetailsPage.aspx.cs">
+      <DependentUpon>RecipeDetailsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assets\RecipeDetailsPage.aspx.designer.cs">
+      <DependentUpon>RecipeDetailsPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Content.Master.cs">
       <DependentUpon>Content.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,6 +213,13 @@
     </Compile>
     <Compile Include="ProfilePage.aspx.designer.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipePage.aspx.cs">
+      <DependentUpon>RecipePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipePage.aspx.designer.cs">
+      <DependentUpon>RecipePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="registrationPage.aspx.cs">
       <DependentUpon>registrationPage.aspx</DependentUpon>
