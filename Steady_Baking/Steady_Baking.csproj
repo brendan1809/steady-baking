@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutPage.aspx" />
     <Content Include="AdminAddRecipe.aspx" />
     <Content Include="AdminAddUser.aspx" />
     <Content Include="AdminDashboard.aspx" />
@@ -88,12 +89,13 @@
     </Content>
     <Content Include="Assets\Facebook logo.png" />
     <Content Include="Assets\Logo.png" />
-    <Content Include="Assets\RecipeDetailsPage.aspx" />
+    <Content Include="ContactUsPage.aspx" />
     <Content Include="FAQPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="ProfilePage.aspx" />
     <Content Include="RecipePage.aspx" />
+    <Content Include="RecipePageDetails.aspx" />
     <Content Include="registrationPage.aspx" />
     <Content Include="ResetPassword.aspx" />
     <Content Include="SignIn.aspx" />
@@ -102,6 +104,13 @@
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutPage.aspx.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutPage.aspx.designer.cs">
+      <DependentUpon>AboutPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminAddRecipe.aspx.cs">
       <DependentUpon>AdminAddRecipe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,12 +181,12 @@
     <Compile Include="AdminUser.aspx.designer.cs">
       <DependentUpon>AdminUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Assets\RecipeDetailsPage.aspx.cs">
-      <DependentUpon>RecipeDetailsPage.aspx</DependentUpon>
+    <Compile Include="ContactUsPage.aspx.cs">
+      <DependentUpon>ContactUsPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Assets\RecipeDetailsPage.aspx.designer.cs">
-      <DependentUpon>RecipeDetailsPage.aspx</DependentUpon>
+    <Compile Include="ContactUsPage.aspx.designer.cs">
+      <DependentUpon>ContactUsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Content.Master.cs">
       <DependentUpon>Content.Master</DependentUpon>
@@ -220,6 +229,13 @@
     </Compile>
     <Compile Include="RecipePage.aspx.designer.cs">
       <DependentUpon>RecipePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecipePageDetails.aspx.cs">
+      <DependentUpon>RecipePageDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecipePageDetails.aspx.designer.cs">
+      <DependentUpon>RecipePageDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="registrationPage.aspx.cs">
       <DependentUpon>registrationPage.aspx</DependentUpon>
