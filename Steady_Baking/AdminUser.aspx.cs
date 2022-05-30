@@ -15,7 +15,6 @@ namespace Steady_Baking
 {
     public partial class AdminUser : System.Web.UI.Page
     {
-        public Boolean isToView { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             //  SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
@@ -36,7 +35,7 @@ namespace Steady_Baking
 
         protected void ViewButton_Click(object sender, EventArgs e)
         {
-            isToView = !isToView;
+            
         }
 
         protected void EditButton_Click(object sender, EventArgs e)
