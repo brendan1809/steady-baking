@@ -80,8 +80,8 @@
                     <li><a href="AdminUser.aspx">User</a></li>
                     <li><a href="AdminRecipe.aspx">Recipes</a></li>
                     <li><a href="AdminMisc.aspx">Misc</a></li>
-                    <li><a href="x.aspx">FAQ</a></li>
-                    <li><a href="x.aspx">Feedback</a></li>
+                    <li><a href="AdminFAQ.aspx">FAQ</a></li>
+                    <li><a href="AdminFeedback.aspx">Feedback</a></li>
                </ul>
             <div style="display:flex; width:100%">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
