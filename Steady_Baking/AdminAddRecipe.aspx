@@ -45,7 +45,7 @@
     </style>
 
     <div style="margin-left:60px; width:100%">
-        <h5><span style ="color:#BDB6AA">Recipes Management/  </span>Add New Recipes</h5>
+        <h5><span style ="color:#BDB6AA">Recipes Management/ </span>Add New Recipes</h5>
         <h3>Add New Recipes</h3>
         <div style="display:flex; flex-direction:row"></div>
         <div class="content-box">
@@ -77,13 +77,12 @@
                     <td>
                         <br>
                         <asp:Label ID="Label2" runat="server" ForeColor="#6E7376" Text="Image"></asp:Label>
+                            <asp:FileUpload ID="FileUpload1" runat="server" /><br/>
+                            <asp:Button ID="Button1" runat="server" Text="Upload File" OnClick="UploadFile" /><br/>
+                            <asp:Image ID="Image1" runat="server"  />
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <asp:Image ID="Image1" runat="server" />
-                    </td>
-                </tr>
+
                 <tr>
                     <td>
                         <asp:Label ID="Label6" runat="server" ForeColor="#6E7376" Text="Ingredients &amp; Tools"></asp:Label>

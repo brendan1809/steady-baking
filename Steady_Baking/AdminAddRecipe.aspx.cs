@@ -11,6 +11,9 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Configuration;
 
+// For Image Upload
+using System.IO;
+
 namespace Steady_Baking
 {
     public partial class AdminAddRecipe : System.Web.UI.Page
@@ -25,10 +28,11 @@ namespace Steady_Baking
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
 
-            string query1 = "INSERT INTO Recipe (title, author, image, insruction, recipe_details, created_at, updated_at) values (@title, @author, @image, @instruction, @recipeDetails, @created, @created)";
+            string query1 = "INSERT INTO Recipe (title, author, image, instruction, recipe_details, created_at, updated_at) values (@title, @author, @image, @instruction, @recipeDetails, @created, @created)";
             SqlCommand cmd1 = new SqlCommand(query1, con);
             cmd1.Parameters.AddWithValue("@title", PageTitle.Text);
             cmd1.Parameters.AddWithValue("@author", Author.Text);
+            cmd1.Parameters.AddWithValue("@image", Image1.ImageUrl);
             cmd1.Parameters.AddWithValue("@instruction", Instructions.Text);
             cmd1.Parameters.AddWithValue("@recipeDetails", IngredientsTools.Text);
             cmd1.Parameters.AddWithValue("@created", DateTime.Now.ToString());
@@ -42,7 +46,20 @@ namespace Steady_Baking
 
         protected void UploadFile(object sender, EventArgs e)
         {
+            string folderPath = Server.MapPath("~/Images/");
 
+            //Check whether Directory (Folder) exists.
+            if (!Directory.Exists(folderPath))
+            {
+                //If Directory (Folder) does not exists Create it.
+                Directory.CreateDirectory(folderPath);
+            }
+
+            //Save the File to the Directory (Folder).
+            FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
+
+            //Display the Picture in Image control.
+            Image1.ImageUrl = "~/Images/" + Path.GetFileName(FileUpload1.FileName);
         }
 
         protected void Button2_Click(object sender, EventArgs e)
