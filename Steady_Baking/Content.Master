@@ -78,12 +78,12 @@
     <form id="form1" runat="server">
         <div style="margin-top:100px; flex-direction:row; display:flex; height:100vh"">
                 <ul>
-                    <li><a href="HomePage.aspx">Home</a></li>
-                    <li><a href="AdminUser.aspx">About</a></li>
+                    <li><a href="HomePage1.aspx">Home</a></li>
+                    <li><a href="AboutPage.aspx">About</a></li>
                     <li><a href="ProfilePage.aspx">Profile</a></li>
-                    <li><a href="AdminMisc.aspx">Recipe</a></li>
-                    <li><a href="AdminFAQ.aspx">Contact Us</a></li>
-                    <li><a href="FeedbackPage.aspx">FAQ</a></li>
+                    <li><a href="RecipePage.aspx">Recipe</a></li>
+                    <li><a href="ContactUsPage.aspx">Contact Us</a></li>
+                    <li><a href="FAQPage.aspx">FAQ</a></li>
                 </ul>
             <div style="display:flex; width:100%; height:100%">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

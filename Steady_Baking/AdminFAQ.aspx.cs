@@ -17,22 +17,18 @@ namespace Steady_Baking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            con.Open();
+            SqlCommand total = new SqlCommand("SELECT COUNT (*) FROM FAQ", con);
 
+            object totalFAQ = total.ExecuteScalar();
+
+            TotalFAQ.Text = "Total FAQ:" + Convert.ToString(totalFAQ);
         }
 
         protected void AddFAQ_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminAddFAQ.aspx");
-        }
-
-        protected void EditButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void DeleteButton_Click(object sender, EventArgs e)
-        {
-
         }
 
         protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -44,9 +40,9 @@ namespace Steady_Baking
                 SqlCommand cmd1 = new SqlCommand("DELETE FROM FAQ WHERE Id =" + e.CommandArgument, con);
                 cmd1.ExecuteNonQuery();
             }
-            else if (e.CommandName.ToString() == "Edit")
+            if (e.CommandName.ToString() == "EditFAQ")
             {
-                Response.Redirect("AdminAddFAQ.aspx" + "/Edit/id?=" + e.CommandArgument);
+                Response.Redirect("AdminAddFAQ.aspx?id=" + e.CommandArgument + "/edit");
             }
 
         }

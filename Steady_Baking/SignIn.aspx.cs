@@ -41,7 +41,7 @@ namespace Steady_Baking
                 if (type == "Admin")
                     Response.Redirect("AdminDashbard.aspx");
                 else if (type == "Users")
-                    Response.Redirect("ProfilePage.aspx");
+                    Response.Redirect("HomePage1.aspx");
             }
             else
             {

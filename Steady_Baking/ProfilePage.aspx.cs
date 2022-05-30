@@ -17,7 +17,6 @@ namespace Steady_Baking
         {
             Label5.Text = Session["Id"].ToString();
             emailBox.Text = Session["email"].ToString();
-            phoneNoBox.Text = Session["phone_number"].ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)

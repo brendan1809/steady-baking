@@ -24,11 +24,29 @@
         .auto-style1 {
             width: 100%;
         }
-
+        .TitleStyle {
+             display: block;
+             font-size: .83em;
+             margin:0;
+             font-weight: bold;
+             color:#FFB905;
+        }
+        .DescriptionStyle{
+              display: block;
+              font-size: 1.17em;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              margin-left: 0;
+              margin-right: 0;
+              font-weight: bold;
+              color:#FFB905;
+        }
     </style>
         <div style="margin-left:60px; width:100%">
-            <h5><span style ="color:#BDB6AA">FAQ Management/  </span>Add New FAQ</h5>
-            <h3>Add New FAQ</h3>
+             <div style="flex-direction:row; display:flex; align-items:center;">
+        <h5><span style ="color:#BDB6AA">FAQ Management/  </span></h5>  <asp:Label ID="TitleText" runat="server" Text="Label" CssClass="TitleStyle"/>
+        </div>
+        <asp:Label ID="DesciptionText" runat="server" Text="Label" CssClass="DescriptionStyle"/>
             <div style="display:flex; flex-direction:row"></div>
             <div class="content-box">
                 <table class="auto-style1">
