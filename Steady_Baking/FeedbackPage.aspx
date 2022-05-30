@@ -29,6 +29,8 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label6" runat="server" Text="This field is required" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -39,6 +41,8 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label5" runat="server" Text="Invalid email address"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -49,6 +53,7 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     </td>
                 </tr>
                 <tr>

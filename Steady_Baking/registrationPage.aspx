@@ -14,10 +14,10 @@
             height: 149px;
         }
         .auto-style2 {
-            width: 242px;
+            width: 303px;
         }
         .auto-style3 {
-            width: 242px;
+            width: 303px;
             height: 23px;
         }
         .auto-style4 {
@@ -27,14 +27,14 @@
             width: 1316px;
         }
         .auto-style6 {
-            width: 242px;
+            width: 303px;
             height: 26px;
         }
         .auto-style7 {
             height: 26px;
         }
         .auto-style8 {
-            width: 242px;
+            width: 303px;
             height: 30px;
         }
         .auto-style9 {
@@ -54,6 +54,8 @@
         <tr>
             <td class="auto-style2">
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label6" runat="server" Text="This field is required " Visible="False"></asp:Label>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -68,9 +70,13 @@
         <tr>
             <td class="auto-style6">
                 <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label7" runat="server" Text="This field is required " Visible="False"></asp:Label>
             </td>
             <td class="auto-style7">
                 <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label8" runat="server" Text="This field is required " Visible="False"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -84,9 +90,13 @@
         <tr>
             <td class="auto-style6">
                 <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label10" runat="server" Text="This field is required " Visible="False"></asp:Label>
             </td>
             <td class="auto-style7">
                 <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label9" runat="server" Text="Password does not match" Visible="False"></asp:Label>
             </td>
         </tr>
         <tr>

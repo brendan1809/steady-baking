@@ -33,6 +33,15 @@ namespace Steady_Baking
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,15 @@ namespace Steady_Baking
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
         /// TextBox3 control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace Steady_Baking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
+
+        /// <summary>
+        /// Label8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
         /// Label3 control.
@@ -96,6 +123,15 @@ namespace Steady_Baking
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
 
         /// <summary>
+        /// Label10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label10;
+
+        /// <summary>
         /// TextBox5 control.
         /// </summary>
         /// <remarks>
@@ -103,6 +139,15 @@ namespace Steady_Baking
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
+
+        /// <summary>
+        /// Label9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
         /// Button1 control.

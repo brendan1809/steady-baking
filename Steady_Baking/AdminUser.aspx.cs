@@ -55,6 +55,10 @@ namespace Steady_Baking
                 con.Open();
                 SqlCommand cmd1 = new SqlCommand("DELETE FROM UserInfo WHERE Id =" + e.CommandArgument, con);
                 cmd1.ExecuteNonQuery();
+
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridView1.DeleteRow(index);
+
             }
             else if (e.CommandName.ToString() == "EditUser")
             {

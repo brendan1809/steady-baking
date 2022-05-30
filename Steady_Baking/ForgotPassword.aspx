@@ -34,7 +34,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server" Width="382px"></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Width="253px"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label2" runat="server" Text="Invalid Email" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>

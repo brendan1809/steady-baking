@@ -56,6 +56,8 @@
                 <tr>
                     <td class="auto-style9">
                         <asp:TextBox ID="emailBox" runat="server" BorderColor="#FFB905" Width="186px"></asp:TextBox>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Label8" runat="server" Text="This field is required" Visible="False"></asp:Label>
                     </td>
                 </tr>
                 <tr>
@@ -65,7 +67,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style9">
-                        <asp:TextBox ID="pwdBox" runat="server" Width="187px"></asp:TextBox><a href="ForgotPassword.aspx">Forgot Password</a>
+                        <asp:TextBox ID="pwdBox" runat="server" Width="187px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp; <a href="ForgotPassword.aspx">Forgot Password</a>
                     </td>
                 </tr>
                 <tr>
