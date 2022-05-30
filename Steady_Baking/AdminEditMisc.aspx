@@ -119,6 +119,7 @@
                         <td>
                             <div style="position:relative; left:20px; top:30px;">
                             <asp:Button ID="SaveChanges" runat="server" Text="Save Changes" BackColor="#FFB905" BorderStyle="None" ForeColor="White" Height="25px" OnClick="Button1_Click" Width="130px" />
+                            <asp:Label ID="ContactUsLabel" runat="server" Text=""></asp:Label>
                             </div>
                         </td>
                     </tr>
@@ -141,7 +142,8 @@
                      <tr>
                          <td>
                             <div style="position:relative; left:100px; top:30px;">
-                            <asp:Button ID="SaveChanges0" runat="server" Text="Save Changes" BackColor="#FFB905" BorderStyle="None" ForeColor="White" Height="25px" OnClick="Button1_Click" Width="130px" />
+                            <asp:Button ID="SaveChanges0" runat="server" Text="Save Changes" BackColor="#FFB905" BorderStyle="None" ForeColor="White" Height="25px" OnClick="SaveChanges0_Click" Width="130px" />
+                             <asp:Label ID="AboutUsLabel" runat="server" Text=""></asp:Label>
                             </div>
                          </td>
                      </tr>

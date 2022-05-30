@@ -75,7 +75,6 @@
     <Content Include="AdminEditMisc.aspx" />
     <Content Include="AdminFAQ.aspx" />
     <Content Include="AdminFeedback.aspx" />
-    <Content Include="AdminMisc.aspx" />
     <Content Include="AdminRecipe.aspx" />
     <Content Include="AdminUser.aspx" />
     <Content Include="AdminUser.css" />
@@ -161,13 +160,6 @@
     </Compile>
     <Compile Include="AdminFeedback.aspx.designer.cs">
       <DependentUpon>AdminFeedback.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminMisc.aspx.cs">
-      <DependentUpon>AdminMisc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminMisc.aspx.designer.cs">
-      <DependentUpon>AdminMisc.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminRecipe.aspx.cs">
       <DependentUpon>AdminRecipe.aspx</DependentUpon>
