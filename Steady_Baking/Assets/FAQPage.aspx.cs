@@ -23,6 +23,7 @@ namespace Steady_Baking.Assets
         {
 
         }
+<<<<<<< Updated upstream
 
         protected void BulletedList1_Click1(object sender, BulletedListEventArgs e)
         {
@@ -33,5 +34,7 @@ namespace Steady_Baking.Assets
         {
 
         }
+=======
+>>>>>>> Stashed changes
     }
 }

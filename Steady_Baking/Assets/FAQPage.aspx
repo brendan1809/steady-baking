@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<<<<<<< Updated upstream
     <h1>Hello! We're here to assist you :)</h1>
 
     <asp:BulletedList ID="BulletedList1" runat="server" OnClick="BulletedList1_Click1">
@@ -28,4 +29,12 @@
     <asp:BulletedList ID="BulletedList7" runat="server" OnClick="BulletedList7_Click7">
         <asp:ListItem>Can I make my own buttermilk?</asp:ListItem>
     </asp:BulletedList>
+=======
+    <p>Hello! We're here to assist you :)</p>
+    <p>
+        <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+            <asp:ListItem Value="ii">hhh</asp:ListItem>
+        </asp:DropDownList>
+    </p>
+>>>>>>> Stashed changes
 </asp:Content>
