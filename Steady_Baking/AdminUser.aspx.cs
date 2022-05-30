@@ -32,35 +32,9 @@ namespace Steady_Baking
             Response.Redirect("AdminAddUser.aspx");
         }
 
-        protected void ViewButton_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void EditButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void DeleteButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName.ToString() == "Del")
-            {
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-                con.Open();
-                SqlCommand cmd1 = new SqlCommand("DELETE FROM UserInfo WHERE Id =" + e.CommandArgument, con);
-                cmd1.ExecuteNonQuery();
-
-                int index = Convert.ToInt32(e.CommandArgument);
-                GridView1.DeleteRow(index);
-
-            }
-            else if (e.CommandName.ToString() == "EditUser")
+            if (e.CommandName.ToString() == "EditUser")
             {
                 Response.Redirect("AdminAddUser.aspx" + "/Edit/id?=" + e.CommandArgument);
             }
