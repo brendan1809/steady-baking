@@ -8,9 +8,9 @@
 //------------------------------------------------------------------------------
 
 
-namespace Steady_Baking.Assets
+namespace Steady_Baking
 {
-    public partial class RecipeDetailsPage
+    public partial class RecipePageDetails
     {
     }
 }
