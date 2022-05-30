@@ -31,10 +31,5 @@ namespace Steady_Baking
             DailyUser.Text = Convert.ToString(dailyUser);
             WeeklyUser.Text = Convert.ToString(weeklyUser);
         }
-
-        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

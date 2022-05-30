@@ -73,7 +73,7 @@
         <div style="background:white; margin-top:20px; padding:30px">
             <asp:Label ID="TotalUser" runat="server" Text="Label"></asp:Label>
             <div style="display:flex; align-items:center">
-                <asp:GridView ID="GridView1" runat="server" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand">
+                <asp:GridView ID="GridView1" runat="server" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="UserInfoDataSource" OnRowCommand="GridView1_RowCommand">
                    
                     <Columns>
                         <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" SortExpression="Id" ItemStyle-Width="200px">
@@ -102,15 +102,17 @@
                         </asp:BoundField>
                           <asp:TemplateField HeaderText="Action" ItemStyle-Width="200px" ItemStyle-HorizontalAlign="Center">
                             <ItemTemplate>
-                                <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="View" ID="ViewButton" runat="server" Text="View" OnClick="ViewButton_Click"/>
                                 <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="EditUser" ID="EditButton" runat="server" Text="Edit" OnClick="EditButton_Click"/>
                                 <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="Del" ID="DeleteButton" runat="server" Text="Delete" OnClick="DeleteButton_Click"/>
                             </ItemTemplate>                
                            </asp:TemplateField>
                     </Columns>
-                   
                 </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [UserInfo]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="UserInfoDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [UserInfo] WHERE Id = @Id" SelectCommand="SELECT * FROM [UserInfo]" >
+                     <DeleteParameters>
+                 <asp:ControlParameter Name="MUSTERI" ControlId="DropDownListID" PropertyName="SelectedValue" />
+   </DeleteParameters>
+                </asp:SqlDataSource>
             </div>
         </div>
     </div>
