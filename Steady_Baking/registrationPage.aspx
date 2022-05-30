@@ -65,7 +65,7 @@
         </tr>
         <tr>
             <td class="auto-style2">
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="name" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label6" runat="server" Text="This field is required " Visible="False"></asp:Label>
             </td>
@@ -81,12 +81,12 @@
         </tr>
         <tr>
             <td class="auto-style6">
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="email" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label7" runat="server" Text="This field is required " Visible="False"></asp:Label>
             </td>
             <td class="auto-style7">
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:TextBox ID="phoneNo" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label8" runat="server" Text="This field is required " Visible="False"></asp:Label>
             </td>
@@ -101,12 +101,12 @@
         </tr>
         <tr>
             <td class="auto-style6">
-                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                <asp:TextBox ID="pwd" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label10" runat="server" Text="This field is required " Visible="False"></asp:Label>
             </td>
             <td class="auto-style7">
-                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                <asp:TextBox ID="confirmPwd" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Label ID="Label9" runat="server" Text="Password does not match" Visible="False"></asp:Label>
             </td>
