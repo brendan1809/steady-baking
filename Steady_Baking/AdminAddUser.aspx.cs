@@ -19,30 +19,34 @@ namespace Steady_Baking
         {
             if (Request.Url.AbsoluteUri.Contains("edit"))
             {
-                string id = Request.QueryString["id"].Replace("/edit", @"");
-                TitleText.Text = "Edit User";
-                DesciptionText.Text = "Edit User";
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-                con.Open();
-
-                SqlCommand cmd = new SqlCommand("SELECT* FROM UserInfo WHERE Id = @ID",con);
-                cmd.Parameters.AddWithValue("@ID", id);
-                var reader = cmd.ExecuteReader();
-                if (reader.Read())
+                if (Request.Url.AbsoluteUri.Contains("edit"))
                 {
-                    Name.Text = reader["user_name"].ToString();
-                    Email.Text = reader["email"].ToString();
-                    Password.Text = reader["password_hash"].ToString();
-                    ConfirmPassword.Text = reader["password_hash"].ToString();
-                    PhoneNumber.Text = reader["phone_number"].ToString();
-                    DropDownList1.SelectedValue = reader["user_type"].ToString();
+                    string id = Request.QueryString["id"].Replace("/edit", @"");
+                    TitleText.Text = "Edit User";
+                    DesciptionText.Text = "Edit User";
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT* FROM UserInfo WHERE Id = @ID", con);
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    var reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        Name.Text = reader["user_name"].ToString();
+                        Email.Text = reader["email"].ToString();
+                        Password.Text = reader["password_hash"].ToString();
+                        ConfirmPassword.Text = reader["password_hash"].ToString();
+                        PhoneNumber.Text = reader["phone_number"].ToString();
+                        DropDownList1.SelectedValue = reader["user_type"].ToString();
+                    }
+
+
                 }
-
-
-            } else
-            {
-                TitleText.Text = "Add New User";
-                DesciptionText.Text = "Add New User";
+                else
+                {
+                    TitleText.Text = "Add New User";
+                    DesciptionText.Text = "Add New User";
+                }
             }
         }
 

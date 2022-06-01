@@ -74,18 +74,18 @@
 
     </asp:ContentPlaceHolder>
 </head>
-<body style="background-color:#F7F7F7; display:flex;">
+<body style="background-color:#F7F7F7;">
     <form id="form1" runat="server">
-        <div style="margin-top:100px; flex-direction:row; display:flex; height:100vh"">
+         <div style="margin-top:100px; flex-direction:row; display:flex; height:100%">
                 <ul>
                     <li><a href="HomePage1.aspx">Home</a></li>
-                    <li><a href="AboutPage.aspx">About</a></li>
+                    <li><a href="AboutPage.aspx">About Us</a></li>
                     <li><a href="ProfilePage.aspx">Profile</a></li>
                     <li><a href="RecipePage.aspx">Recipe</a></li>
                     <li><a href="ContactUsPage.aspx">Contact Us</a></li>
                     <li><a href="FAQPage.aspx">FAQ</a></li>
                 </ul>
-            <div style="display:flex; width:100%; height:100%">
+            <div style="display:flex; width:100%; min-height:85vh; margin-right:40px;">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
             </div>
