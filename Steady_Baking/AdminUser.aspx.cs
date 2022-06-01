@@ -37,7 +37,14 @@ namespace Steady_Baking
         {   
             if (e.CommandName.ToString() == "Del")
             {
-                Response.Redirect("AdminUser.aspx");
+                int index = Convert.ToInt32(e.CommandArgument);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                con.Open();
+                SqlCommand deleteUser = new SqlCommand("DELETE FROM UserInfo WHERE Id = "+index, con);
+
+                deleteUser.ExecuteNonQuery();
+
+                UserGridView.DeleteRow(index);
             }
             else if (e.CommandName.ToString() == "EditUser")
             {

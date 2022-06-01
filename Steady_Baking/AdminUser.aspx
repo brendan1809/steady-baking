@@ -108,7 +108,7 @@
                            </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="UserInfoDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [UserInfo]" DeleteCommand="DELETE FROM [UserInfo] WHERE [Id] = @Id">
+                <asp:SqlDataSource ID="UserInfoDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [UserInfo]" DeleteCommand="DELETE FROM UserInfo WHERE Id = @Id">
                     <DeleteParameters>
                         <asp:Parameter Name="Id" Type="Int32"/>
                     </DeleteParameters>

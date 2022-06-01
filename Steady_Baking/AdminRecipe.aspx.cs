@@ -37,7 +37,18 @@ namespace Steady_Baking
 
         protected void GridView1_RowCommand1(object sender, GridViewCommandEventArgs e)
         {
-            if (e.CommandName.ToString() == "EditRecipe")
+            if (e.CommandName.ToString() == "Del")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                con.Open();
+                SqlCommand deleteUser = new SqlCommand("DELETE FROM Recipe WHERE Id = " + index, con);
+
+                deleteUser.ExecuteNonQuery();
+
+                GridView1.DeleteRow(index);
+            }
+            else if (e.CommandName.ToString() == "EditRecipe")
             {
                 Response.Redirect("AdminAddRecipe.aspx?id=" + e.CommandArgument + "/edit");
             }

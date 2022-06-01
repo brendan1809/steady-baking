@@ -111,7 +111,7 @@
     </header>
 <!-- Footer -->
 <footer>
-  <p style="font-family: 'times New Roman', Times, serif; text-align: center; bottom:0; position: fixed; background-color:white">Copyright © Steady Bakery. All Rights Reserved</p>
+  <p style="font-family: 'times New Roman', Times, serif; text-align: center; bottom:0; background-color:white; padding-top:20px;padding-bottom:20px">Copyright © Steady Bakery. All Rights Reserved</p>
 </footer>
 
 </body>

@@ -18,8 +18,8 @@
             background-color:white;
             padding:10px 10px 10px 10px;
             border-radius:20px 20px;
-            height:1200px;
-            width:900px;
+            flex:1;
+            margin-bottom:50px;
         }
         .auto-style1 {
             width: 100%;
@@ -151,10 +151,11 @@
                 </tr>
                 <tr>
                     <td>
-                        <div style="position:relative; left:200px; top:40px;">
+                        <div style="margin-top:20px; margin-bottom:20px">
                         <asp:Button ID="AddNewRecipe" runat="server" BackColor="#FFB905" BorderColor="White" BorderStyle="None" ForeColor="White" Height="25px" OnClick="Button1_Click" Text="Add New Recipe" Width="130px" />
                         </div>
-                        </td>
+                        
+                     </td>
                 </tr>
             </table>
         </div>

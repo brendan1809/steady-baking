@@ -35,10 +35,15 @@ namespace Steady_Baking
         {
             if (e.CommandName.ToString() == "Del")
             {
+                int index = Convert.ToInt32(e.CommandArgument);
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 con.Open();
-                SqlCommand cmd1 = new SqlCommand("DELETE FROM FAQ WHERE Id =" + e.CommandArgument, con);
-                cmd1.ExecuteNonQuery();
+                SqlCommand deleteUser = new SqlCommand("DELETE FROM FAQ WHERE Id = " + index, con);
+
+                deleteUser.ExecuteNonQuery();
+
+                GridView2.DeleteRow(index);
+                Response.Redirect("AdminFAQ.aspx");
             }
             if (e.CommandName.ToString() == "EditFAQ")
             {
@@ -47,9 +52,6 @@ namespace Steady_Baking
 
         }
 
-        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }
