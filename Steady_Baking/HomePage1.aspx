@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="HomePage1.css" rel="stylesheet" />
-    <div style="background-color:green;">
+    <div>
         <div style="display:flex; flex-direction:column">
             <div class="fixedcontent-box">
                 <img class="img-cakeheader" src="Assets/CakeHeader.jpg" alt="Welcome Picture">
@@ -14,10 +14,6 @@
             <br>
             <br>
         <div style="display:flex; flex-direction:row">
-         
-                
-                
-         
             <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatDirection="Horizontal" RepeatColumns="4" Width="1171px">
                 <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Justify" VerticalAlign="Middle" />
                 <ItemTemplate>
