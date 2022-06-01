@@ -20,36 +20,37 @@ namespace Steady_Baking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Url.AbsoluteUri.Contains("edit"))
-            {
-                string id = Request.QueryString["id"].Replace("/edit", @"");
-                TitleText.Text = "Edit Recipe";
-                DesciptionText.Text = "Edit Recipe";
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-                con.Open();
-
-                SqlCommand cmd = new SqlCommand("SELECT* FROM Recipe WHERE Id = @ID", con);
-                cmd.Parameters.AddWithValue("@ID", id);
-                var reader = cmd.ExecuteReader();
-                if (reader.Read())
+            if (!Page.IsPostBack) { 
+                if (Request.Url.AbsoluteUri.Contains("edit"))
                 {
-                    PageTitle.Text = reader["title"].ToString();
-                    Author.Text = reader["author"].ToString();
-                    Image1.ImageUrl = reader["image"].ToString();
-                    Instructions.Text = reader["instruction"].ToString();
-                    IngredientsTools.Text = reader["recipe_details"].ToString();
-                    TotalTime.Text = reader["total_time"].ToString();
-                    Serving.Text = reader["serving"].ToString();
+                    string id = Request.QueryString["id"].Replace("/edit", @"");
+                    TitleText.Text = "Edit Recipe";
+                    DesciptionText.Text = "Edit Recipe";
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT* FROM Recipe WHERE Id = @ID", con);
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    var reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        PageTitle.Text = reader["title"].ToString();
+                        Author.Text = reader["author"].ToString();
+                        Image1.ImageUrl = reader["image"].ToString();
+                        Instructions.Text = reader["instruction"].ToString();
+                        IngredientsTools.Text = reader["recipe_details"].ToString();
+                        TotalTime.Text = reader["total_time"].ToString();
+                        Serving.Text = reader["serving"].ToString();
+                    }
+
+
                 }
-
-
-            }
-            else
-            {
-                TitleText.Text = "Add New Recipe";
-                DesciptionText.Text = "Add Recipe";
-            }
-        }
+                else
+                {
+                    TitleText.Text = "Add New Recipe";
+                    DesciptionText.Text = "Add Recipe";
+                }
+        } }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -59,14 +60,13 @@ namespace Steady_Baking
                 con.Open();
 
                 string id = Request.QueryString["id"].Replace("/edit", @"");
-                string query1 = "UPDATE Recipe SET title=@title, author=@author, image=@image, instruction=@instruction, recipe_details=@recipeDetails,created_at=@created, updated_at=@updated, total_time=@TotalTime, serving=@serving WHERE Id=@ID";
+                string query1 = "UPDATE Recipe SET title=@title, author=@author, image=@image, instruction=@instruction, recipe_details=@recipeDetails, updated_at=@updated, total_time=@TotalTime, serving=@serving WHERE Id=@ID";
                 SqlCommand cmd1 = new SqlCommand(query1, con);
                 cmd1.Parameters.AddWithValue("@title", PageTitle.Text);
                 cmd1.Parameters.AddWithValue("@author", Author.Text);
                 cmd1.Parameters.AddWithValue("@image", Image1.ImageUrl);
                 cmd1.Parameters.AddWithValue("@instruction", Instructions.Text);
                 cmd1.Parameters.AddWithValue("@recipeDetails", IngredientsTools.Text);
-                cmd1.Parameters.AddWithValue("@created", DateTime.Now.ToString());
                 cmd1.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
                 cmd1.Parameters.AddWithValue("@totalTime", TotalTime.Text);
                 cmd1.Parameters.AddWithValue("@serving", Serving.Text);

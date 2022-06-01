@@ -39,7 +39,7 @@ namespace Steady_Baking
                 Session["email"] = email;
                 Session["Id"] = id;
                 if (type == "Admin")
-                    Response.Redirect("AdminDashbard.aspx");
+                    Response.Redirect("AdminDashboard.aspx");
                 else if (type == "Users")
                     Response.Redirect("HomePage1.aspx");
             }

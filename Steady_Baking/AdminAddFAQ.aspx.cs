@@ -17,27 +17,30 @@ namespace Steady_Baking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Url.AbsoluteUri.Contains("edit"))
+            if (!Page.IsPostBack)
             {
-                string id = Request.QueryString["id"].Replace("/edit", @"");
-                TitleText.Text = "Edit FAQ";
-                DesciptionText.Text = "Edit FAQ";
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-                con.Open();
-
-                SqlCommand cmd = new SqlCommand("SELECT * FROM FAQ WHERE Id = @ID", con);
-                cmd.Parameters.AddWithValue("@ID", id);
-                var reader = cmd.ExecuteReader();
-                if (reader.Read())
+                if (Request.Url.AbsoluteUri.Contains("edit"))
                 {
-                    Answer.Text = reader["answer"].ToString();
-                    Question.Text = reader["question"].ToString(); 
+                    string id = Request.QueryString["id"].Replace("/edit", @"");
+                    TitleText.Text = "Edit FAQ";
+                    DesciptionText.Text = "Edit FAQ";
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                    con.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM FAQ WHERE Id = @ID", con);
+                    cmd.Parameters.AddWithValue("@ID", id);
+                    var reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        Answer.Text = reader["answer"].ToString();
+                        Question.Text = reader["question"].ToString();
+                    }
                 }
-            }
-            else
-            {
-                TitleText.Text = "Add New FAQ";
-                DesciptionText.Text = "Add New FAQ";
+                else
+                {
+                    TitleText.Text = "Add New FAQ";
+                    DesciptionText.Text = "Add New FAQ";
+                }
             }
         }
 

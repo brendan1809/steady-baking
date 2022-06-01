@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="HomePage1.css" rel="stylesheet" />
-    <div style="margin-left:60px; width:100%">
+    <div style="background-color:green;">
         <div style="display:flex; flex-direction:column">
             <div class="fixedcontent-box">
                 <img class="img-cakeheader" src="Assets/CakeHeader.jpg" alt="Welcome Picture">
