@@ -14,11 +14,11 @@
             <br>
             <br>
         <div style="display:flex; flex-direction:row">
-            <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatDirection="Horizontal" RepeatColumns="4" Width="1171px">
+            <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatDirection="Horizontal" RepeatColumns="3" Width="1171px">
                 <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Justify" VerticalAlign="Middle" />
                 <ItemTemplate>
                     
-                    <asp:Image ID="Image1" runat="server" Height="90%" ImageUrl='<%# Eval("Image") %>' Width="90%" />
+                    <asp:Image ID="Image1" CssClass="img" runat="server" Height="90%" ImageUrl='<%# Eval("Image") %>' Width="90%" />
                     <br />
                     
                     <asp:Label ID="titleLabel" runat="server" Text='<%# Eval("title") %>' CssClass="title-label"/>

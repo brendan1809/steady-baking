@@ -79,3 +79,7 @@ title-label {
     font-size: 5em;
     text-align-last: center;
 }
+
+.img {
+    border-radius: 8px;
+}
