@@ -57,7 +57,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="Question" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="100px" Width="300px"></asp:TextBox>
+                            <asp:TextBox ID="Question" TextMode="MultiLine" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="100px" Width="300px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Question" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
@@ -69,7 +69,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="Answer" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="100px" Width="300px"></asp:TextBox>
+                            <asp:TextBox ID="Answer" TextMode="MultiLine" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="100px" Width="300px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Answer" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>

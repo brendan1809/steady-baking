@@ -25,6 +25,7 @@ namespace Steady_Baking
             object totalUser = total.ExecuteScalar();
 
             TotalUser.Text = "Total User:" + Convert.ToString(totalUser);
+            con.Close();
         }
 
         protected void AddUser_Click(object sender, EventArgs e)
@@ -33,8 +34,12 @@ namespace Steady_Baking
         }
 
         protected void UserGridView_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            if (e.CommandName.ToString() == "EditUser")
+        {   
+            if (e.CommandName.ToString() == "Del")
+            {
+                Response.Redirect("AdminUser.aspx");
+            }
+            else if (e.CommandName.ToString() == "EditUser")
             {
                 Response.Redirect("AdminAddUser.aspx?id=" + e.CommandArgument + "/edit" );
             }

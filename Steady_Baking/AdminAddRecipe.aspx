@@ -109,7 +109,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:TextBox ID="IngredientsTools" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="200px" Width="500px"></asp:TextBox>
+                        <asp:TextBox ID="IngredientsTools" TextMode="MultiLine" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="200px" Width="500px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="IngredientsTools" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
@@ -121,7 +121,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:TextBox ID="Instructions" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="200px" Width="500px"></asp:TextBox>
+                        <asp:TextBox ID="Instructions" TextMode="MultiLine" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="200px" Width="500px"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Instructions" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                 </tr>

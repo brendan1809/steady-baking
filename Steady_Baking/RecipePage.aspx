@@ -2,8 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <<<<<<< Updated upstream
-    <h1>Check out these fun baking ideas, including cakes, breads, bars and more, that you'll be glad to tried!</h1>
+    &nbsp;<h1>Check out these fun baking ideas, including cakes, breads, bars and more, that you'll be glad to tried!</h1>
     <asp:Image ID="Image1" runat="server" Height="90px" Width="123px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Image ID="Image2" runat="server" Height="90px" Width="123px" />

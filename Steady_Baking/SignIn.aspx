@@ -59,7 +59,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style9">
-                        <asp:TextBox ID="pwdBox" runat="server" Width="187px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp; <a href="ForgotPassword.aspx">Forgot Password</a>
+                        <asp:TextBox ID="pwdBox" runat="server" Width="187px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp; 
                     </td>
                 </tr>
                 <tr>

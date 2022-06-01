@@ -23,15 +23,18 @@ namespace Steady_Baking
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
 
-            string query1 = "INSERT INTO UserInfo (user_name, email, phone_number, password_hash) values (@userName, @email, @phoneNumber, @password)";
+            string query1 = "INSERT INTO UserInfo (user_name, email, phone_number, password_hash,created_at,updated_at) values (@userName, @email, @phoneNumber, @password,@created,@updated)";
             SqlCommand cmd1 = new SqlCommand(query1, con);
             cmd1.Parameters.AddWithValue("@userName", name.Text);
             cmd1.Parameters.AddWithValue("@email", email.Text);
             cmd1.Parameters.AddWithValue("@phoneNumber", phoneNo.Text);
             cmd1.Parameters.AddWithValue("@password", confirmPwd.Text);
+            cmd1.Parameters.AddWithValue("@created", DateTime.Now.ToString());
+            cmd1.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
 
             cmd1.ExecuteNonQuery();
-            Response.Redirect("ProfilePage.aspx");
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Record Inserted Successfully')", true);
+            Response.Redirect("SignIn.aspx");
         }
     }
 }
