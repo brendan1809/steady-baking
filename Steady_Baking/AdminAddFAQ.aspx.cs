@@ -46,34 +46,37 @@ namespace Steady_Baking
 
         protected void AddFAQ_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            con.Open();
-
-            if (Request.Url.AbsoluteUri.Contains("edit"))
+            if (Page.IsValid)
             {
-                string id = Request.QueryString["id"].Replace("/edit", @"");
-                string query1 = "UPDATE FAQ SET question=@question, answer=@answer, updated_at=@update WHERE Id=@ID";
-                SqlCommand cmd1 = new SqlCommand(query1, con);
-                cmd1.Parameters.AddWithValue("@question", Question.Text);
-                cmd1.Parameters.AddWithValue("@answer", Answer.Text);
-                cmd1.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
-                cmd1.Parameters.AddWithValue("@ID", id);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                con.Open();
 
-                cmd1.ExecuteNonQuery();
-                Response.Redirect("AdminFAQ.aspx");
-            }
-            else
-            {
+                if (Request.Url.AbsoluteUri.Contains("edit"))
+                {
+                    string id = Request.QueryString["id"].Replace("/edit", @"");
+                    string query1 = "UPDATE FAQ SET question=@question, answer=@answer, updated_at=@update WHERE Id=@ID";
+                    SqlCommand cmd1 = new SqlCommand(query1, con);
+                    cmd1.Parameters.AddWithValue("@question", Question.Text);
+                    cmd1.Parameters.AddWithValue("@answer", Answer.Text);
+                    cmd1.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
+                    cmd1.Parameters.AddWithValue("@ID", id);
 
-                string query1 = "INSERT INTO FAQ (question,answer, created_at, updated_at) values (@question, @answer, @created, @created)";
-                SqlCommand cmd1 = new SqlCommand(query1, con);
-                cmd1.Parameters.AddWithValue("@question", Question.Text);
-                cmd1.Parameters.AddWithValue("@answer", Answer.Text);
-                cmd1.Parameters.AddWithValue("@created", DateTime.Now.ToString());
-                cmd1.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
+                    cmd1.ExecuteNonQuery();
+                    Response.Redirect("AdminFAQ.aspx");
+                }
+                else
+                {
 
-                cmd1.ExecuteNonQuery();
-                Response.Redirect("AdminFAQ.aspx");
+                    string query1 = "INSERT INTO FAQ (question,answer, created_at, updated_at) values (@question, @answer, @created, @created)";
+                    SqlCommand cmd1 = new SqlCommand(query1, con);
+                    cmd1.Parameters.AddWithValue("@question", Question.Text);
+                    cmd1.Parameters.AddWithValue("@answer", Answer.Text);
+                    cmd1.Parameters.AddWithValue("@created", DateTime.Now.ToString());
+                    cmd1.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
+
+                    cmd1.ExecuteNonQuery();
+                    Response.Redirect("AdminFAQ.aspx");
+                }
             }
         }
     }

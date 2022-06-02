@@ -67,7 +67,8 @@
             <td class="auto-style2">
                 <asp:TextBox ID="name" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label6" runat="server" Text="This field is required " Visible="False"></asp:Label>
+                <br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="name" EnableClientScript="False" ErrorMessage="Please enter a name." ForeColor="#D93F31"></asp:RequiredFieldValidator>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -82,13 +83,15 @@
         <tr>
             <td class="auto-style6">
                 <asp:TextBox ID="email" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label7" runat="server" Text="This field is required " Visible="False"></asp:Label>
-            </td>
+                <br>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="email" EnableClientScript="False" ErrorMessage="Please enter a valid email address." ForeColor="#D93F31" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                <br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" EnableClientScript="False" ErrorMessage="Please enter an email." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                </td>
             <td class="auto-style7">
                 <asp:TextBox ID="phoneNo" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label8" runat="server" Text="This field is required " Visible="False"></asp:Label>
+                <br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Plase enter phone number." ForeColor="#D93F31" ControlToValidate="phoneNo" EnableClientScript="False"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -102,13 +105,13 @@
         <tr>
             <td class="auto-style6">
                 <asp:TextBox ID="pwd" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label10" runat="server" Text="This field is required " Visible="False"></asp:Label>
-            </td>
+                <br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="pwd" EnableClientScript="False" ErrorMessage="Please enter a password." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                </td>
             <td class="auto-style7">
                 <asp:TextBox ID="confirmPwd" runat="server"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="Label9" runat="server" Text="Password does not match" Visible="False"></asp:Label>
+                <br>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="confirmPwd" ControlToValidate="pwd" EnableClientScript="False" ErrorMessage="Password entered don't match!" ForeColor="#D93F31"></asp:CompareValidator>
             </td>
         </tr>
         <tr>

@@ -35,7 +35,7 @@
             height: 41px;
         }
         .auto-style3 {
-            height: 28px;
+            height: 34px;
         }
         
         .auto-style4 {
@@ -78,7 +78,7 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="PageTitle" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="PageTitle" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="PageTitle" EnableClientScript="False" ErrorMessage="Please enter the title for the page." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
@@ -90,6 +90,7 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="Author" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="Author" EnableClientScript="False" ErrorMessage="RequiredFieldValidator" ForeColor="#D93F31">Please enter Author&#39;s name.</asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
@@ -134,7 +135,7 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="TotalTime" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TotalTime" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TotalTime" EnableClientScript="False" ErrorMessage="Please state the total time needed." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
@@ -146,7 +147,7 @@
                 <tr>
                     <td>
                         <asp:TextBox ID="Serving" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="20px" Width="200px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="Serving" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="Serving" EnableClientScript="False" ErrorMessage="This field is required. " ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                 </tr>
                 <tr>
