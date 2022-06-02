@@ -52,7 +52,7 @@ namespace Steady_Baking
             if (Request.Url.AbsoluteUri.Contains("edit"))
             {
                 string id = Request.QueryString["id"].Replace("/edit", @"");
-                string query1 = "UPDATE UserInfo SET question=@question, answer=@answer, updated_at=@update WHERE Id=@ID";
+                string query1 = "UPDATE FAQ SET question=@question, answer=@answer, updated_at=@update WHERE Id=@ID";
                 SqlCommand cmd1 = new SqlCommand(query1, con);
                 cmd1.Parameters.AddWithValue("@question", Question.Text);
                 cmd1.Parameters.AddWithValue("@answer", Answer.Text);

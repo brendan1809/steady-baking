@@ -8,60 +8,40 @@
             background-color:white;
             padding:10px 10px 10px 10px;
             border-radius:20px 20px;
-            height:500px;
-            width:400px;
+            height:80%;
             }
-        btn {
-            position:fixed;
-            left:220px;
-            top:610px;
+        .input-container{
+            margin-top:10px;
+            margin-bottom:10px;
+            justify-content:space-between;
         }
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            width: 89px;
+        .text-box{
+            border:2px solid #FFB800;
+            outline:none;
+            box-shadow:none;
+            height:20px;
+            width:300px;
         }
     </style>
     <div style="margin-left:60px; width:100%">
         <div style="display:flex; flex-direction:row"></div>
         <div class="content-box">
-            <h3>Account</h3>
-            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Image ID="Image1" runat="server" Height="48px" Width="61px" />
-            </h3>
-            <table class="auto-style1">
-            <tr>
-                <td class="auto-style2">
+            <h1>Account</h1>
+            
+            <div class="input-container">
                     <asp:Label ID="Label1" runat="server" Text="Username:"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="usernameBox" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
+                    <asp:TextBox CssClass="text-box" ID="usernameBox" runat="server"></asp:TextBox>
+            </div>
+             <div class="input-container">
                     <asp:Label ID="Label3" runat="server" Text="Email:"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="emailBox" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    <asp:Label ID="Label5" runat="server" Text="Phone No:"></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="phoneNoBox" runat="server"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td>
-                    <asp:Button ID="Button1" runat="server" Text="Edit Profile" OnClick="Button1_Click" />
-                </td>
-            </tr>
-            </table>
+                    <asp:TextBox CssClass="text-box" ID="emailBox" runat="server"></asp:TextBox>
+             </div>    
+                <div class="input-container">
+                    <asp:Label ID="Label5" runat="server" Text="Phone Number:"></asp:Label>
+                    <asp:TextBox CssClass="text-box" ID="phoneNoBox" runat="server"></asp:TextBox>
+                </div>
+             <asp:Button ID="Button1" runat="server" Text="Edit Profile" OnClick="Button1_Click" />
+             <asp:Label ID="Message" runat="server" Text=""></asp:Label>
         </div>
     </div>
 </asp:Content>

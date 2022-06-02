@@ -87,6 +87,7 @@
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\Facebook logo.png" />
+    <Content Include="Assets\Frame 35548 %281%29.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="ContactUsPage.aspx" />
     <Content Include="FAQPage.aspx" />

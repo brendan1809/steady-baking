@@ -17,7 +17,7 @@ namespace Steady_Baking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Url.AbsoluteUri.Contains("edit"))
+            if (!Page.IsPostBack)
             {
                 if (Request.Url.AbsoluteUri.Contains("edit"))
                 {
@@ -50,41 +50,44 @@ namespace Steady_Baking
             }
         }
 
-        protected void Submit_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            con.Open();
-
-            if (Request.Url.AbsoluteUri.Contains("edit"))
+            if (Page.IsValid)
             {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                con.Open();
 
-                string id = Request.QueryString["id"].Replace("/edit", @"");
-                string query1 = "UPDATE UserInfo SET user_name=@username, user_type=@userType, email=@email, phone_number=@phoneNumber, password_hash=@password,updated_at=@updated WHERE Id=@ID";
-                SqlCommand cmd1 = new SqlCommand(query1, con);
-                cmd1.Parameters.AddWithValue("@userName", Name.Text);
-                cmd1.Parameters.AddWithValue("@userType", DropDownList1.SelectedItem.ToString());
-                cmd1.Parameters.AddWithValue("@email", Email.Text);
-                cmd1.Parameters.AddWithValue("@phoneNumber", PhoneNumber.Text);
-                cmd1.Parameters.AddWithValue("@password", ConfirmPassword.Text);
-                cmd1.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
-                cmd1.Parameters.AddWithValue("@ID", id);
-                cmd1.ExecuteNonQuery();
-                Response.Redirect("AdminUser.aspx");
-            }
-            else
-            {
-                string query2 = "INSERT INTO UserInfo (user_name, user_type, email, phone_number, password_hash, created_at, updated_at) values (@userName, @userType, @email, @phoneNumber, @password, @created, @updated)";
-                SqlCommand cmd2 = new SqlCommand(query2, con);
-                cmd2.Parameters.AddWithValue("@userName", Name.Text);
-                cmd2.Parameters.AddWithValue("@userType", DropDownList1.SelectedItem.ToString());
-                cmd2.Parameters.AddWithValue("@email", Email.Text);
-                cmd2.Parameters.AddWithValue("@phoneNumber", PhoneNumber.Text);
-                cmd2.Parameters.AddWithValue("@password", ConfirmPassword.Text);
-                cmd2.Parameters.AddWithValue("@created", DateTime.Now.ToString());
-                cmd2.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
+                if (Request.Url.AbsoluteUri.Contains("edit"))
+                {
 
-                cmd2.ExecuteNonQuery();
-                Response.Redirect("AdminUser.aspx");
+                    string id = Request.QueryString["id"].Replace("/edit", @"");
+                    string query1 = "UPDATE UserInfo SET user_name=@username, user_type=@userType, email=@email, phone_number=@phoneNumber, password_hash=@password,updated_at=@updated WHERE Id=@ID";
+                    SqlCommand cmd1 = new SqlCommand(query1, con);
+                    cmd1.Parameters.AddWithValue("@userName", Name.Text);
+                    cmd1.Parameters.AddWithValue("@userType", DropDownList1.SelectedItem.ToString());
+                    cmd1.Parameters.AddWithValue("@email", Email.Text);
+                    cmd1.Parameters.AddWithValue("@phoneNumber", PhoneNumber.Text);
+                    cmd1.Parameters.AddWithValue("@password", ConfirmPassword.Text);
+                    cmd1.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
+                    cmd1.Parameters.AddWithValue("@ID", id);
+                    cmd1.ExecuteNonQuery();
+                    Response.Redirect("AdminUser.aspx");
+                }
+                else
+                {
+                    string query2 = "INSERT INTO UserInfo (user_name, user_type, email, phone_number, password_hash, created_at, updated_at) values (@userName, @userType, @email, @phoneNumber, @password, @created, @updated)";
+                    SqlCommand cmd2 = new SqlCommand(query2, con);
+                    cmd2.Parameters.AddWithValue("@userName", Name.Text);
+                    cmd2.Parameters.AddWithValue("@userType", DropDownList1.SelectedItem.ToString());
+                    cmd2.Parameters.AddWithValue("@email", Email.Text);
+                    cmd2.Parameters.AddWithValue("@phoneNumber", PhoneNumber.Text);
+                    cmd2.Parameters.AddWithValue("@password", ConfirmPassword.Text);
+                    cmd2.Parameters.AddWithValue("@created", DateTime.Now.ToString());
+                    cmd2.Parameters.AddWithValue("@updated", DateTime.Now.ToString());
+
+                    cmd2.ExecuteNonQuery();
+                    Response.Redirect("AdminUser.aspx");
+                }
             }
         }
     }

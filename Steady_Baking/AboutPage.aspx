@@ -21,7 +21,9 @@
         }
     </style>
    <div>
-   <h1 style="margin-left:20px;">Get To Know Us!</h1>
+<div>
+    <h1 style="text-align:center">Get To Know Us!</h1>
+    </div>
     <asp:Label ID="Label1" runat="server" Text="Label" CssClass="about-us-text"></asp:Label>
      <asp:Image ID="Image1" CssClass="about-image" runat="server"  ImageUrl="https://media.istockphoto.com/photos/fresh-cakes-picture-id497959594?b=1&k=20&m=497959594&s=170667a&w=0&h=bARJnh0s5Udce7K30WPdeVnud23lVg5WngzD9Jral9w="/>
    </div>
