@@ -22,6 +22,7 @@
             height:20px;
             width:300px;
         }
+
     </style>
     <div style="margin-left:60px; width:100%">
         <div style="display:flex; flex-direction:row"></div>
