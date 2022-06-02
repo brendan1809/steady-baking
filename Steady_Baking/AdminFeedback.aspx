@@ -26,6 +26,7 @@
           height: 43px;
           width:79px;
         }
+
         .SearchBoxStyle{
           margin-left:10px;
           margin-right:10px;
