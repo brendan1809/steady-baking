@@ -61,7 +61,9 @@
             <td class="auto-style3">
                 <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
             </td>
-            <td class="auto-style4"></td>
+            <td class="auto-style4">
+                <asp:Label ID="Label4" runat="server" Text="Phone No."></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="auto-style2">
@@ -70,37 +72,45 @@
                 <br>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="name" EnableClientScript="False" ErrorMessage="Please enter a name." ForeColor="#D93F31"></asp:RequiredFieldValidator>
             </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">
-                <asp:Label ID="Label2" runat="server" Text="Email"></asp:Label>
-            </td>
             <td>
-                <asp:Label ID="Label4" runat="server" Text="Phone No."></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style6">
-                <asp:TextBox ID="email" runat="server"></asp:TextBox>
-                <br>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="email" EnableClientScript="False" ErrorMessage="Please enter a valid email address." ForeColor="#D93F31" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                <br>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" EnableClientScript="False" ErrorMessage="Please enter an email." ForeColor="#D93F31"></asp:RequiredFieldValidator>
-                </td>
-            <td class="auto-style7">
                 <asp:TextBox ID="phoneNo" runat="server"></asp:TextBox>
                 <br>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Plase enter phone number." ForeColor="#D93F31" ControlToValidate="phoneNo" EnableClientScript="False"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
+            
+            <td class="auto-style2">
+                <br>
+                <asp:Label ID="Label2" runat="server" Text="Email"></asp:Label>
+            </td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style6">
+                <asp:TextBox ID="email" runat="server"></asp:TextBox>
+                <br>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" EnableClientScript="False" ErrorMessage="Please enter an email." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                <br>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="email" EnableClientScript="False" ErrorMessage="Please enter a valid email address." ForeColor="#D93F31" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+
+                </td>
+            <td class="auto-style7">
+                <asp:Label ID="Label5" runat="server" Text="Confirm Password"></asp:Label>
+                <br>
+                <asp:TextBox ID="confirmPwd" runat="server"></asp:TextBox>
+                <br>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="confirmPwd" ControlToValidate="pwd" EnableClientScript="False" ErrorMessage="Password entered don't match!" ForeColor="#D93F31"></asp:CompareValidator>
+            </td>
+        </tr>
+        <tr>
+            <br>
             <td class="auto-style3">
                 <asp:Label ID="Label3" runat="server" Text="Password"></asp:Label>
             </td>
             <td class="auto-style4">
-                <asp:Label ID="Label5" runat="server" Text="Confirm Password"></asp:Label>
-            </td>
+                &nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style6">
@@ -109,9 +119,7 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="pwd" EnableClientScript="False" ErrorMessage="Please enter a password." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                 </td>
             <td class="auto-style7">
-                <asp:TextBox ID="confirmPwd" runat="server"></asp:TextBox>
                 <br>
-                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="confirmPwd" ControlToValidate="pwd" EnableClientScript="False" ErrorMessage="Password entered don't match!" ForeColor="#D93F31"></asp:CompareValidator>
             </td>
         </tr>
         <tr>
@@ -119,7 +127,7 @@
                 <center><asp:Button ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" /></center>
             </td>
             <td class="auto-style9">
-                <font size="3">Already have an Account </font><a href="SignIn.aspx">Sign in</a></td>
+                <font size="3">Already have an Account? </font><a href="SignIn.aspx">Sign in</a></td>
         </tr>
         </table>
     </div>
