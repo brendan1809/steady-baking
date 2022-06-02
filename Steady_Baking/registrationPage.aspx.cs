@@ -23,9 +23,10 @@ namespace Steady_Baking
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
 
-            string query1 = "INSERT INTO UserInfo (user_name, email, phone_number, password_hash,created_at,updated_at) values (@userName, @email, @phoneNumber, @password,@created,@updated)";
+            string query1 = "INSERT INTO UserInfo (user_name,user_type, email, phone_number, password_hash,created_at,updated_at) values (@userName,@userType, @email, @phoneNumber, @password,@created,@updated)";
             SqlCommand cmd1 = new SqlCommand(query1, con);
             cmd1.Parameters.AddWithValue("@userName", name.Text);
+            cmd1.Parameters.AddWithValue("@userType", "Users");
             cmd1.Parameters.AddWithValue("@email", email.Text);
             cmd1.Parameters.AddWithValue("@phoneNumber", phoneNo.Text);
             cmd1.Parameters.AddWithValue("@password", confirmPwd.Text);
