@@ -24,11 +24,29 @@
         .auto-style1 {
             width: 100%;
         }
-
+        .TitleStyle {
+             display: block;
+             font-size: .83em;
+             margin:0;
+             font-weight: bold;
+             color:#FFB905;
+        }
+        .DescriptionStyle{
+              display: block;
+              font-size: 1.17em;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              margin-left: 0;
+              margin-right: 0;
+              font-weight: bold;
+              color:#FFB905;
+        }
     </style>
         <div style="margin-left:60px; width:100%">
-            <h5><span style ="color:#BDB6AA">FAQ Management/  </span>Add New FAQ</h5>
-            <h3>Add New FAQ</h3>
+             <div style="flex-direction:row; display:flex; align-items:center;">
+        <h5><span style ="color:#BDB6AA">FAQ Management/  </span></h5>  <asp:Label ID="TitleText" runat="server" Text="Label" CssClass="TitleStyle"/>
+        </div>
+        <asp:Label ID="DesciptionText" runat="server" Text="Label" CssClass="DescriptionStyle"/>
             <div style="display:flex; flex-direction:row"></div>
             <div class="content-box">
                 <table class="auto-style1">
@@ -39,8 +57,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="Question" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="100px" Width="300px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Question" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                            <asp:TextBox ID="Question" TextMode="MultiLine" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="100px" Width="300px"></asp:TextBox>
+                            <br>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Question" EnableClientScript="False" ErrorMessage="Please enter the question." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>
@@ -51,8 +70,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox ID="Answer" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="100px" Width="300px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Answer" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                            <asp:TextBox ID="Answer" TextMode="MultiLine" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="100px" Width="300px"></asp:TextBox>
+                            <br>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Answer" EnableClientScript="False" ErrorMessage="Please enter the answer to the question above." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>

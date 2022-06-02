@@ -134,9 +134,9 @@
                      <tr>
                          <td>
                              <br>
-                             <asp:TextBox ID="AboutUs" runat="server" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="200px" Width="380px"></asp:TextBox>
+                             <asp:TextBox ID="AboutUs" runat="server" TextMode="MultiLine" BorderColor="#B0B0B0" BorderStyle="Solid" BorderWidth="1px" Height="200px" Width="380px"></asp:TextBox>
                              <br />
-                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="AboutUs" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1"  runat="server" ControlToValidate="AboutUs" EnableClientScript="False" ErrorMessage="This field is required." ForeColor="#D93F31"></asp:RequiredFieldValidator>
                          </td>
                      </tr>
                      <tr>

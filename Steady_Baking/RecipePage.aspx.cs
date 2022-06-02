@@ -13,5 +13,14 @@ namespace Steady_Baking
         {
 
         }
+
+        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "viewdetails")
+            {
+                Response.Redirect("RecipePageDetails.aspx?id=" + e.CommandArgument.ToString());
+
+            }
+        }
     }
 }

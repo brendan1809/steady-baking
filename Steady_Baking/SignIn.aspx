@@ -47,9 +47,11 @@
                 </tr>
                 <tr>
                     <td class="auto-style9">
-                        <asp:TextBox ID="emailBox" runat="server" BorderColor="#FFB905" Width="186px"></asp:TextBox>
+                        <asp:TextBox ID="emailBox" runat="server" BorderColor="#FFB905" Width="186px" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Label ID="Label8" runat="server" Text="Email address not found" Visible="False"></asp:Label>
+                        <br>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter email to continue!" ControlToValidate="emailBox" EnableClientScript="False" ForeColor="#D93F31"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -59,7 +61,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style9">
-                        <asp:TextBox ID="pwdBox" runat="server" Width="187px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp; <a href="ForgotPassword.aspx">Forgot Password</a>
+                        <asp:TextBox ID="pwdBox" runat="server" Width="187px" BorderColor="#FFB905" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter password!" ControlToValidate="pwdBox" EnableClientScript="False" ForeColor="#D93F31"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>

@@ -87,11 +87,16 @@
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\Facebook logo.png" />
+    <Content Include="Assets\Frame 35547.png" />
+    <Content Include="Assets\Frame 35548 %281%29.png" />
+    <Content Include="Assets\Frame 35554.png" />
+    <Content Include="Assets\image 16.png" />
+    <Content Include="Assets\image 17.png" />
+    <Content Include="Assets\image 18.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="ContactUsPage.aspx" />
     <Content Include="FAQPage.aspx" />
     <Content Include="FeedbackPage.aspx" />
-    <Content Include="ForgotPassword.aspx" />
     <Content Include="HomePage1.aspx" />
     <Content Include="HomePage1.css" />
     <Content Include="ProfilePage.aspx" />
@@ -202,13 +207,6 @@
     </Compile>
     <Compile Include="FeedbackPage.aspx.designer.cs">
       <DependentUpon>FeedbackPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ForgotPassword.aspx.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ForgotPassword.aspx.designer.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage1.aspx.cs">
       <DependentUpon>HomePage1.aspx</DependentUpon>

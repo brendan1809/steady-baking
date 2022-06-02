@@ -17,7 +17,13 @@ namespace Steady_Baking
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            con.Open();
+            SqlCommand total = new SqlCommand("SELECT COUNT (*) FROM FAQ", con);
 
+            object totalFAQ = total.ExecuteScalar();
+
+            TotalFAQ.Text = "Total FAQ:" + Convert.ToString(totalFAQ);
         }
 
         protected void AddFAQ_Click(object sender, EventArgs e)
@@ -25,35 +31,27 @@ namespace Steady_Baking
             Response.Redirect("AdminAddFAQ.aspx");
         }
 
-        protected void EditButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void DeleteButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void GridView2_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName.ToString() == "Del")
             {
+                int index = Convert.ToInt32(e.CommandArgument);
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 con.Open();
-                SqlCommand cmd1 = new SqlCommand("DELETE FROM FAQ WHERE Id =" + e.CommandArgument, con);
-                cmd1.ExecuteNonQuery();
+                SqlCommand deleteUser = new SqlCommand("DELETE FROM FAQ WHERE Id = " + index, con);
+
+                deleteUser.ExecuteNonQuery();
+
+                GridView2.DeleteRow(index);
+                Response.Redirect("AdminFAQ.aspx");
             }
-            else if (e.CommandName.ToString() == "Edit")
+            if (e.CommandName.ToString() == "EditFAQ")
             {
-                Response.Redirect("AdminAddFAQ.aspx" + "/Edit/id?=" + e.CommandArgument);
+                Response.Redirect("AdminAddFAQ.aspx?id=" + e.CommandArgument + "/edit");
             }
 
         }
 
-        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

@@ -2,16 +2,29 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Get to know us!</h1>
-    <p>
-        <meta charset="utf-8" />
-        <span style="white-space:pre-wrap;">Cupcake ipsum dolor sit amet sugar plum sugar plum cake. Tootsie roll wafer chocolate bar cotton candy cake tiramisu I love jelly. Dragée I love I love sweet roll dragée brownie gummies I love. Danish pastry tart chocolate tart topping croissant.
-        <br />
-        Biscuit sweet dragée chocolate cake muffin. Soufflé biscuit muffin jujubes sweet roll candy chocolate gummi bears I love. Cake bonbon sweet roll muffin gummi bears gummies.
-        <br />
-        Cake shortbread icing cake sugar plum dessert. I love I love halvah toffee I love soufflé cake. Soufflé sweet sweet roll halvah apple pie cotton candy topping.
-        <br />
-        Gummi bears liquorice jelly beans powder chocolate cake macaroon dragée. Sweet roll tiramisu I love ice cream muffin. Marshmallow I love dragée jelly-o sweet roll marshmallow chocolate bar pie.
-        <br />
-        Tiramisu lemon drops dragée cake sweet roll halvah bear claw cupcake. Dessert dragée I love sweet sesame snaps cake powder. Chocolate bar cheesecake icing sugar plum I love cheesecake chocolate cake sugar plum.</span></p>
+    <style>
+        .about-us-text{
+          display: block;
+          font-size: 25px;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          font-weight: bold;
+          line-height: 50px;
+          text-align:justify;
+          margin-left:200px;
+          margin-right:200px;
+        }
+        .about-image{
+            justify-self:center;
+            margin-left: 559px;
+            margin-right: 0px;
+        }
+    </style>
+   <div>
+<div>
+    <h1 style="text-align:center">Get To Know Us!</h1>
+    </div>
+    <asp:Label ID="Label1" runat="server" Text="Label" CssClass="about-us-text"></asp:Label>
+     <asp:Image ID="Image1" CssClass="about-image" runat="server"  ImageUrl="https://media.istockphoto.com/photos/fresh-cakes-picture-id497959594?b=1&k=20&m=497959594&s=170667a&w=0&h=bARJnh0s5Udce7K30WPdeVnud23lVg5WngzD9Jral9w="/>
+   </div>
 </asp:Content>

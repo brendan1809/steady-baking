@@ -28,7 +28,9 @@ namespace Steady_Baking
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
             Response.Write(count.ToString());
 
+
             if (count > 0)
+
             {
                 SqlCommand cmdType = new SqlCommand("select user_type from UserInfo where email = '" + emailBox.Text + "'", con);
                 SqlCommand getId = new SqlCommand("select Id from UserInfo where email = '" + emailBox.Text + "'", con);
@@ -38,11 +40,20 @@ namespace Steady_Baking
                 Session["user_type"] = type;
                 Session["email"] = email;
                 Session["Id"] = id;
+
                 if (type == "Admin")
-                    Response.Redirect("AdminDashbard.aspx");
+                    Response.Redirect("AdminDashboard.aspx");
+
                 else if (type == "Users")
-                    Response.Redirect("ProfilePage.aspx");
+                    Response.Redirect("HomePage1.aspx");
             }
+
+            //dk which part did wrong didn't work
+            /*else if(pwdBox.Text != "" && emailBox.Text != "")
+            {
+                Label8.Visible = false;
+            }*/
+            
             else
             {
                 this.Label8.Visible = true;

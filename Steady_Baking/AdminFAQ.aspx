@@ -64,11 +64,6 @@
             <div style="flex-direction:row; display:flex; align-items:center">
                 <p>Search By :</p>
                 <asp:TextBox CssClass="SearchBoxStyle" ID="TextBox1" runat="server" placeholder="Quick Search"></asp:TextBox>
-                <p>Role </p>
-                <asp:DropDownList CssClass="RoleDropdownStyle" ID="DropDownList1" runat="server" Height="20px" Width="100px" placeholder="Select Role">
-                    <asp:ListItem>Users</asp:ListItem>
-                    <asp:ListItem>Admin</asp:ListItem>
-                </asp:DropDownList>
             </div>
             <div style="flex-direction:row; display:flex; align-items:center; justify-content:flex-end">
                 <asp:Button ID="SearchButton" runat="server" Text="Search" CssClass="SearchButtonStyle" />
@@ -77,36 +72,33 @@
         </div>
         
         <div style="background:white; margin-top:20px; padding:30px">
-            <asp:Label ID="TotalUser" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="TotalFAQ" runat="server" Text="Label"></asp:Label>
             <div style="display:flex; align-items:center">
                 <asp:GridView ID="GridView2" runat="server" CssClass="GridViewStyle" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="FAQDatabase" OnRowCommand="GridView2_RowCommand">
                     <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id"  ItemStyle-Width="200px">
-<ItemStyle Width="200px"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField DataField="created_at" HeaderText="created_at" SortExpression="created_at"  ItemStyle-Width="200px">
-<ItemStyle Width="200px"></ItemStyle>
+                    <asp:BoundField DataField="created_at" HeaderText="created_at" SortExpression="created_at"  ItemStyle-Width="250px">
                     </asp:BoundField>
-                    <asp:BoundField DataField="updated_at" HeaderText="updated_at" SortExpression="updated_at"  ItemStyle-Width="200px">
-<ItemStyle Width="200px"></ItemStyle>
+                    <asp:BoundField DataField="updated_at" HeaderText="updated_at" SortExpression="updated_at"  ItemStyle-Width="250px">
                     </asp:BoundField>
-                    <asp:BoundField DataField="question" HeaderText="question" SortExpression="question"  ItemStyle-Width="200px">
-<ItemStyle Width="200px"></ItemStyle>
+                    <asp:BoundField DataField="question" HeaderText="question" SortExpression="question"  ItemStyle-Width="250px">
                     </asp:BoundField>
-                    <asp:BoundField DataField="answer" HeaderText="answer" SortExpression="answer"  ItemStyle-Width="200px">
-<ItemStyle Width="200px"></ItemStyle>
+                    <asp:BoundField DataField="answer" HeaderText="answer" SortExpression="answer"  ItemStyle-Width="250px">
                     </asp:BoundField>
-                    <asp:TemplateField HeaderText="Action" ItemStyle-Width="200px" ItemStyle-HorizontalAlign="Center">
+                    <asp:TemplateField HeaderText="Action" ItemStyle-Width="250px" ItemStyle-HorizontalAlign="Center">
                         <ItemTemplate>
-                            <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="EditUser" ID="EditButton" runat="server" Text="Edit" OnClick="EditButton_Click"/>
-                            <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="Del" ID="DeleteButton" runat="server" Text="Delete" OnClick="DeleteButton_Click"/>
+                            <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="EditFAQ" ID="EditButton" runat="server" Text="Edit" />
+                            <asp:LinkButton CommandArgument='<%# Eval("Id") %>' CommandName="Del" ID="DeleteButton" runat="server" Text="Delete" />
                         </ItemTemplate>                
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="FAQDatabase" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [FAQ] WHERE Id = @Id" SelectCommand="SELECT * FROM [FAQ]"></asp:SqlDataSource>
+  
+            <asp:SqlDataSource ID="FAQDatabase" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                DeleteCommand="DELETE FROM [FAQ] WHERE Id = @Id" SelectCommand="SELECT * FROM [FAQ]">
                 <DeleteParameters>
-                    <asp:ControlParameter Name="MUSTERI" ControlId="DropDownListID" PropertyName="SelectedValue" />
+                    <asp:Parameter Name="Id" Type="Int32"/>
                 </DeleteParameters>
                 </asp:SqlDataSource>
             </div>

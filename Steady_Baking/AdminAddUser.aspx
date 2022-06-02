@@ -126,7 +126,7 @@
                     <td>
                         <br><br>
                         <div style="position:relative; left:80px; top:2px;">
-                            <asp:Button ID="Submit" runat="server" BorderStyle="None" ForeColor="White" Text="Submit" BackColor="#FFB905" BorderColor="White" Height="25px" Width="80px" OnClick="Submit_Click" />
+                            <asp:Button ID="Submit" runat="server" BorderStyle="None" ForeColor="White" Text="Submit" BackColor="#FFB905" BorderColor="White" Height="25px" Width="80px" OnClick="Button1_Click" />
                         </div>
                     </td>
                 </tr>

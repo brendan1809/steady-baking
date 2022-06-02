@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="HomePage1.css" rel="stylesheet" />
-    <div style="margin-left:60px; width:100%">
+    <div>
         <div style="display:flex; flex-direction:column">
             <div class="fixedcontent-box">
                 <img class="img-cakeheader" src="Assets/CakeHeader.jpg" alt="Welcome Picture">
@@ -13,19 +13,21 @@
 
             <br>
             <br>
-        <div style="display:flex; flex-direction:row">
-            <div class ="small-content-box">
-                
-                <asp:Label ID="Label2" runat="server" Text="Recipe"></asp:Label>
-                
-            </div>
-            <div class ="small-content-box">
-                <asp:Label ID="Label3" runat="server" Text="Recipe"></asp:Label>
-            </div>
-            <div class ="small-content-box">
-                <asp:Label ID="Label4" runat="server" Text="Recipe"></asp:Label>
-            </div>
-
+        <div style="display:flex; flex-direction:row;justify-content:center; margin-left:100px;">
+            <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatDirection="Horizontal" RepeatColumns="3" Width="1522px">
+                <ItemStyle Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Justify" VerticalAlign="Middle" />
+                <ItemTemplate>
+                    
+                    <asp:Image ID="Image1" CssClass="img" runat="server" Height="400" ImageUrl='<%# Eval("Image") %>' Width="400" />
+                    <br />
+                    
+                    <asp:Label ID="titleLabel" runat="server" Font-Size="X-Large"  Text='<%# Eval("title") %>' CssClass="title-label"/>
+                    <br />
+                    <br />
+                    
+                </ItemTemplate>
+            </asp:DataList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [image], [title] FROM [Recipe]"></asp:SqlDataSource>
         </div>      
     </div>
 </asp:Content>
