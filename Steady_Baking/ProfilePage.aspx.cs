@@ -44,7 +44,7 @@ namespace Steady_Baking
 
             
             cmd1.ExecuteNonQuery();
-            Message.Text = "Update Succesfully!!";
+            Message.Text = "Updated Succesfully!!";
         }
     }
 }
