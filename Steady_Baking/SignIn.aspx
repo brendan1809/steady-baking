@@ -38,7 +38,7 @@
     <div style="margin-left:60px; width:100%">
         <div style="display:flex; flex-direction:row"></div>
         <div class="content-box">
-            <h1 class="auto-style5">&nbsp;&nbsp; Sign In</h1>
+            <h1 style="color:#FFB905;">Sign In </h1>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style8">
@@ -67,7 +67,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" BackColor="#FFB905" BorderStyle="Solid" ForeColor="White" OnClick="Button1_Click" Text="Sign in" Height="29px" Width="83px" />
+                    <td class="auto-style12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" BackColor="#FFB905" BorderStyle="Solid" ForeColor="White" OnClick="Button1_Click" Text="Sign in" Height="29px" Width="83px" BorderColor="White" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                 </td>
                 </tr>

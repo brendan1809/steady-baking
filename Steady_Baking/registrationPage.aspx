@@ -53,7 +53,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="auto-style10">
-    <h1 class="auto-style5">&nbsp; Sign Up</h1>
+    <h1 style="color:#FFB905;">Sign Up </h1>
     
     <table class="auto-style1">
         
@@ -124,7 +124,7 @@
         </tr>
         <tr>
             <td class="auto-style8">
-                <center><asp:Button ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" /></center>
+                <center><asp:Button ID="Button1" runat="server" Text="Sign Up" OnClick="Button1_Click" BackColor="#FFB905" BorderColor="White" ForeColor="White" Height="33px" Width="103px" /></center>
             </td>
             <td class="auto-style9">
                 <font size="3">Already have an Account? </font><a href="SignIn.aspx">Sign in</a></td>
