@@ -61,7 +61,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style9">
-                        <asp:TextBox ID="pwdBox" runat="server" Width="187px" BorderColor="#FFB905" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:TextBox ID="pwdBox" runat="server" Width="187px" BorderColor="#FFB905" BorderStyle="Solid" BorderWidth="1px" TextMode="Password"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;
                         <br>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter password!" ControlToValidate="pwdBox" EnableClientScript="False" ForeColor="#D93F31"></asp:RequiredFieldValidator>
                     </td>
